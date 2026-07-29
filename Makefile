@@ -1,10 +1,10 @@
 # Arch GNU/Hurd rebootstrap -- top-level gates
-.PHONY: help plan check maps status preflight fetch stage0 mig gnumach root repo all-offline clean smoke scan-tools link-assets guest-hint guest-shell guest-shell-run
+.PHONY: help plan check maps status preflight fetch stage0 mig gnumach root repo all-offline clean smoke scan-tools link-assets guest-hint guest-shell guest-shell-run pure-gnu-gate identity-gate legacy-gate test
 
 help:
 	@echo "targets:"
-	@echo "  plan status check maps preflight scan-tools link-assets"
-	@echo "  guest-shell guest-shell-run guest-hint"
+	@echo "  plan status check test maps preflight scan-tools link-assets"
+	@echo "  guest-shell guest-shell-run guest-hint pure-gnu-gate identity-gate legacy-gate"
 	@echo "  fetch stage0 mig gnumach root repo all-offline"
 	@echo "  smoke  (needs IMAGE=... ARCH_HURD_QEMU_ACK=yes)"
 
@@ -20,9 +20,17 @@ maps:
 pure-gnu-gate:
 	bash scripts/verify-pure-gnu-default.sh
 
+identity-gate:
+	bash scripts/verify-identity.sh
+
+legacy-gate:
+	bash scripts/verify-legacy.sh
+
 test:
 	bash tests/test_pure_gnu_gate.sh
 	bash tests/test_maps_inventory.sh
+	bash tests/test_identity.sh
+	bash tests/test_legacy.sh
 
 status:
 	bash scripts/status.sh

@@ -1,23 +1,28 @@
 # Ultra-detailed roadmap -- Arch GNU/Hurd rebootstrap
 
-**Rescope date:** 2026-07-26  
+**Rescope date:** 2026-07-28  
 **Horizon:** M0 (base boots with pacman) -> M4 (optional desktop)  
+**ALPM arch:** `hurd_x86_64` (`IDENTITY.md`)  
 **Source base:** pure GNU Savannah (`SOURCE_POLICY.md`)  
-**glibc strategy:** guest-native (option a; `GLIBC_STRATEGY.md`)
+**Debian role:** bootstrap/porting **reference** only  
+**glibc strategy:** guest-native (option a; `GLIBC_STRATEGY.md`)  
+**Graphics:** non-DRM first; rump DRM/KMS deferred
 
 ## 0. Live repository state
 
 | Observation | Status |
 |---|---|
-| Pure Savannah fetch + pins (gnumach/mig/hurd) | **done** |
+| Pure Savannah fetch + pins (gnumach/mig/hurd/glibc) | **done** |
+| `hurd_x86_64` identity + target pacman fragment | **done** |
+| legacy/ preservation schema + integrity ledger | **done** |
+| Stage graph 0-14 documented | **done** |
 | stage0 headers + matched mig | **done** |
 | gnumach ELF64 pure build | **done** (P3) |
 | Root layout + empty local repo | **done** (scaffold) |
-| Multi-lane host/guest tooling docs + scan/link | **done** |
-| Host gnumig package available | **done** (local PKGBUILD) |
-| Linked gnu-hurd-docker images | **done** (symlinks) |
+| Multi-lane host/guest tooling | **done** |
 | glibc + hurd userspace product build | **open** |
 | Boot + pacman M0 evidence | **open** |
+| rump DRM/KMS | **deferred** (not R0.1) |
 
 ### Remaining deficiencies (M0)
 

@@ -5,7 +5,11 @@ pkgname=glibc
 pkgver=2.41.r0.gTBD
 pkgrel=1
 pkgdesc="GNU C Library for GNU/Hurd (pure Savannah; guest-native build strategy)"
-arch=('x86_64')
+arch=('hurd_x86_64')
+xdata=(
+  'osabi=hurd-gnu'
+  'gnu_tuple=x86_64-gnu'
+)
 url="https://www.gnu.org/software/libc/"
 license=('GPL-2.0-or-later' 'LGPL-2.1-or-later')
 groups=('base')

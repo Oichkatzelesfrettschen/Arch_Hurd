@@ -5,7 +5,11 @@ pkgname=hurd
 pkgver=0.9.r0.g308b36d
 pkgrel=1
 pkgdesc="GNU Hurd servers (pure GNU project; rumpdisk/rumpnet in-tree)"
-arch=('x86_64')
+arch=('hurd_x86_64')
+xdata=(
+  'osabi=hurd-gnu'
+  'gnu_tuple=x86_64-gnu'
+)
 url="https://www.gnu.org/software/hurd/"
 license=('GPL-2.0-or-later')
 groups=('base-hurd')

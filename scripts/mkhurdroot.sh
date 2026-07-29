@@ -46,13 +46,15 @@ fi
 
 # pacman configuration
 mkdir -p "$DEST/etc/pacman.d"
-cat > "$DEST/etc/pacman.conf" <<'EOF'
-#
-# /etc/pacman.conf - Arch GNU/Hurd
-#
+if [[ -f "$ROOT_DIR/config/target/pacman.conf.fragment" ]]; then
+  # Early bootstrap may relax signatures until keyring exists.
+  sed 's/^SigLevel.*/SigLevel    = Optional TrustAll/; s/^LocalFileSigLevel.*/LocalFileSigLevel = Optional/' \
+    "$ROOT_DIR/config/target/pacman.conf.fragment" > "$DEST/etc/pacman.conf"
+else
+  cat > "$DEST/etc/pacman.conf" <<'EOF'
 [options]
 HoldPkg     = pacman glibc hurd gnumach
-Architecture = x86_64
+Architecture = hurd_x86_64
 CheckSpace
 SigLevel    = Optional TrustAll
 LocalFileSigLevel = Optional
@@ -60,6 +62,7 @@ LocalFileSigLevel = Optional
 [core]
 Include = /etc/pacman.d/mirrorlist
 EOF
+fi
 
 if [[ -f "$REPO_MIRROR" ]]; then
   # rewrite Server paths for in-root use: prefer generic file path

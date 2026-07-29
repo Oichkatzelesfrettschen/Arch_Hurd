@@ -6,7 +6,11 @@ pkgname=gnumach
 pkgver=1.8.r0.g55df6d3
 pkgrel=1
 pkgdesc="GNU Mach microkernel (pure GNU Hurd project sources)"
-arch=('x86_64')
+arch=('hurd_x86_64')
+xdata=(
+  'osabi=hurd-gnu'
+  'gnu_tuple=x86_64-gnu'
+)
 url="https://www.gnu.org/software/hurd/microkernel/mach/gnumach.html"
 license=('GPL-2.0-or-later')
 groups=('base-hurd')

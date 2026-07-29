@@ -5,7 +5,11 @@ pkgname=pacman
 pkgver=7.0.0
 pkgrel=1
 pkgdesc="A library-based package manager with dependency support (Hurd port)"
-arch=('x86_64')
+arch=('hurd_x86_64')
+xdata=(
+  'osabi=hurd-gnu'
+  'gnu_tuple=x86_64-gnu'
+)
 url="https://archlinux.org/pacman/"
 license=('GPL-2.0-or-later')
 groups=('base')

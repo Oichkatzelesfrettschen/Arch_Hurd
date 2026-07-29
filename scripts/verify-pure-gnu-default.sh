@@ -75,8 +75,10 @@ while IFS=$'\t' read -r comp oracle rest; do
 done < frontier/ORACLE_PINS.tsv
 
 awk -F'\t' 'NR>1 && ($2 ~ /debian/ || $1 ~ /^debian-/) {
-  if ($5 != "inspiration-only") { print "FAIL: debian pin not inspiration-only:", $0; exit 1 }
-}' frontier/ORACLE_PINS.tsv && echo "OK all debian* pins are inspiration-only"
+  if ($5 != "inspiration-only" && $5 != "reference") {
+    print "FAIL: debian pin not reference/inspiration-only:", $0; exit 1
+  }
+}' frontier/ORACLE_PINS.tsv && echo "OK all debian* pins are reference/inspiration-only"
 
 # APPLY_DEBIAN default must be 0
 for s in scripts/build-stage0-headers.sh scripts/build-mig.sh scripts/build-gnumach.sh; do

@@ -1,12 +1,18 @@
 # Arch GNU/Hurd (modern rebootstrap)
 
-**Status:** research-grounded greenfield rebootstrap (2026-07-26).  
-**Target triple:** `x86_64-pc-gnu` (primary). Historical `i686-pc-gnu` is archival only.  
-**Identity:** Arch Linux packaging model (pacman, PKGBUILD, rolling, KISS) on **pure GNU Hurd + GNU Mach** (Savannah).
+**Status:** x86_64 reconstruction foundation (2026-07-28).  
+**ALPM architecture:** **`hurd_x86_64`** (not plain `x86_64`).  
+**GNU tuple:** compiler `-dumpmachine` / multiarch `x86_64-gnu`.  
+**Identity:** Arch packaging model (pacman, PKGBUILD, rolling) on **pure GNU Hurd + GNU Mach**.
 
-**Source base:** GNU Hurd project git on Savannah (`gnumach`, `mig`, `hurd`).  
-**Debian/Guix:** inspiration for process, QEMU tips, and optional patch *ideas* only — **not** the product base.  
-See [`docs/architecture/SOURCE_POLICY.md`](docs/architecture/SOURCE_POLICY.md).
+**Source base:** Savannah (`gnumach`, `mig`, `hurd`, `glibc`).  
+**Debian GNU/Hurd:** bootstrap/porting **reference** only — never dpkg product identity.  
+**NetBSD 11:** future rump donor; not a Release 0.1 blocker.  
+**Legacy ArchHurd:** preserved under `legacy/` for archaeology only.
+
+See [`docs/architecture/IDENTITY.md`](docs/architecture/IDENTITY.md),  
+[`docs/architecture/SOURCE_POLICY.md`](docs/architecture/SOURCE_POLICY.md),  
+[`docs/architecture/STAGE_GRAPH.md`](docs/architecture/STAGE_GRAPH.md).
 
 ## Why this exists now
 

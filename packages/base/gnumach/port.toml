@@ -1,0 +1,21 @@
+[platform]
+package_arch = "hurd_x86_64"
+gnu_tuple = "x86_64-gnu"
+
+[bootstrap]
+profiles = ["headers", "full"]
+runs_target_binaries = false
+
+[dependencies.headers]
+build = ["mig"]
+host = []
+target = []
+
+[dependencies.full]
+build = ["mig", "gnumach-headers"]
+host = []
+target = []
+
+[provenance]
+origin = "gnu-savannah"
+upstream_status = "tracking"

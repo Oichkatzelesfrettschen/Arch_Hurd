@@ -8,7 +8,9 @@ echo "=== Arch GNU/Hurd status ==="
 echo "root: $ROOT"
 echo "time: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
 echo "source_base: pure GNU Savannah (see SOURCE_POLICY.md)"
+echo "alpm_arch: hurd_x86_64 (see IDENTITY.md)"
 echo "glibc_strategy: guest-native (plan option a)"
+echo "debian_role: reference/bootstrap corpus only"
 echo
 
 if [[ -f frontier/CLAIMS_EVIDENCE.tsv ]]; then
@@ -22,10 +24,10 @@ fi
 
 if [[ -f frontier/ORACLE_PINS.tsv ]]; then
   # pinned-git and pinned both count as pinned product pins
-  pinned=$(awk -F'\t' 'NR>1 && ($5=="pinned" || $5=="pinned-git" || $5=="known") {c++} END{print c+0}' frontier/ORACLE_PINS.tsv)
+  pinned=$(awk -F'\t' 'NR>1 && ($5=="pinned" || $5=="pinned-git" || $5=="known" || $5=="policy") {c++} END{print c+0}' frontier/ORACLE_PINS.tsv)
   unpinned=$(awk -F'\t' 'NR>1 && $5=="unpinned" {c++} END{print c+0}' frontier/ORACLE_PINS.tsv)
-  insp=$(awk -F'\t' 'NR>1 && $5=="inspiration-only" {c++} END{print c+0}' frontier/ORACLE_PINS.tsv)
-  echo "oracle pins: pinned_or_known=$pinned unpinned=$unpinned inspiration_only=$insp"
+  ref=$(awk -F'\t' 'NR>1 && ($5=="inspiration-only" || $5=="reference" || $5=="future-donor" || $5=="legacy") {c++} END{print c+0}' frontier/ORACLE_PINS.tsv)
+  echo "oracle pins: pinned_or_known=$pinned unpinned=$unpinned reference_or_legacy=$ref"
 else
   echo "oracle pins: MISSING"
 fi

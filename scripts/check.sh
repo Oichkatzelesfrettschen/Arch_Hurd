@@ -54,6 +54,8 @@ for d in \
   docs/architecture/SOURCE_POLICY.md \
   docs/architecture/DEV_ENVIRONMENTS.md \
   docs/architecture/GLIBC_STRATEGY.md \
+  docs/architecture/IDENTITY.md \
+  docs/architecture/STAGE_GRAPH.md \
   packages/base/PACKAGE_SET.md
  do
   test -f "$d" || { echo "missing $d" >&2; fail=1; }
@@ -62,6 +64,12 @@ echo "OK docs"
 
 echo "== pure-GNU product default =="
 bash scripts/verify-pure-gnu-default.sh || fail=1
+
+echo "== product identity (hurd_x86_64) =="
+bash scripts/verify-identity.sh || fail=1
+
+echo "== legacy preservation =="
+bash scripts/verify-legacy.sh || fail=1
 
 echo "== handbacks (if present) =="
 shopt -s nullglob

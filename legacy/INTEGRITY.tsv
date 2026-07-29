@@ -1,0 +1,10 @@
+path	sha256	bytes	source_url	captured_utc	original_timestamp	notes
+INTEGRITY.schema.md	1ceacbacc9b7f15d5d4088c69803506c8a836824f69300b78929f3f37841267f	660	local:repo	2026-07-29T02:04:16Z		
+README.md	5681c6d1f46006f1e88fd9e741577bfbfe0b874e78babc03e8227b23af1728c0	1297	local:repo	2026-07-29T02:04:16Z		
+binary-packages/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		never product deps
+git/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		
+mailing-list-material/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		
+package-database/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		
+package-sources/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		
+website/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		
+wiki/.gitkeep	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	0	local:repo	2026-07-29T02:04:16Z		

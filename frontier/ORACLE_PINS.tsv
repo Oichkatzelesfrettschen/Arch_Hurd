@@ -1,9 +1,13 @@
 component	oracle	version_or_ref	arch	status	source_url	notes
-gnumach	gnu-savannah	git:master@aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8	x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/gnumach.git	pure GNU; re-pin on rebuild
-mig	gnu-savannah	git:master@cb48044b30fcfe10529ecc1129dd68e93ed73835	host	pinned-git	https://git.savannah.gnu.org/git/hurd/mig.git	pure GNU
-hurd	gnu-savannah	git:master@308b36dbe2b533717a379402d4243d0224327846	x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/hurd.git	includes rumpdisk rumpnet
-glibc	gnu-hurd	git:master@80be325ebee0e381190c0d408d2592990f13c8c7	x86_64-pc-gnu	pinned-git	https://git.savannah.gnu.org/git/hurd/glibc.git	or glibc + hurd ports
-rumpdisk	gnu-hurd-tree	in-tree hurd/rumpdisk	x86_64	known	hurd.git	not a separate Debian base
-qemu-machine	practice	q35	x86_64	known	Guix/Debian docs as inspiration only	
-debian-gnumach	debian-inspiration	2:1.8+git20260224-11	amd64	inspiration-only	deb.debian.org	DO NOT use as base
-debian-rump	debian-inspiration	0~20250111-8	hurd-amd64	inspiration-only	debian-ports	compare only
+gnumach	gnu-savannah	git:master@aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8	hurd_x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/gnumach.git	product default; UP
+mig	gnu-savannah	git:master@cb48044b30fcfe10529ecc1129dd68e93ed73835	hurd_x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/mig.git	product default
+hurd	gnu-savannah	git:master@308b36dbe2b533717a379402d4243d0224327846	hurd_x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/hurd.git	includes rumpdisk rumpnet
+glibc	gnu-hurd	git:master@80be325ebee0e381190c0d408d2592990f13c8c7	hurd_x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/glibc.git	guest-native strategy a; Hurd-tested line first
+rumpdisk	gnu-hurd-tree	in-tree hurd/rumpdisk	hurd_x86_64	known	hurd.git	product path
+rumpkernel-compat	debian-reference	0~20250111-8 class	hurd-amd64	reference	debian-ports rumpkernel	reproduce first; not product tarball default
+rumpkernel-netbsd11	netbsd-future	netbsd-11 RC7 / pin TBD	donor	future-donor	https://www.netbsd.org/	after compat; never release blocker for R0.1
+pacman	arch-upstream	7.1.x policy	hurd_x86_64	policy	https://gitlab.archlinux.org/pacman/pacman	port 7.x not historical 5.1
+qemu-machine	practice	q35	x86_64	known	Guix/Debian docs as reference	required machine type
+hist-archhurd-i686	legacy-archhurd	2018-2019 staging	i686	legacy	https://archhurd.org/	archaeology only
+debian-gnumach	debian-reference	2:1.8+git20260224-11	hurd-amd64	reference	deb.debian.org	patch corpus; not product base
+debian-hurd	debian-reference	1:0.9.git20260527-3	hurd-amd64	reference	deb.debian.org	bootstrap sequencing reference

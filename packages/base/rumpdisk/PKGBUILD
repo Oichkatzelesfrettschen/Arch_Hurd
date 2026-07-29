@@ -5,7 +5,11 @@ pkgname=rumpdisk
 pkgver=0.9.r0.g308b36d
 pkgrel=1
 pkgdesc="Hurd rumpdisk translator (from pure GNU hurd.git)"
-arch=('x86_64')
+arch=('hurd_x86_64')
+xdata=(
+  'osabi=hurd-gnu'
+  'gnu_tuple=x86_64-gnu'
+)
 url="https://www.gnu.org/software/hurd/hurd/rump.html"
 license=('GPL-2.0-or-later')
 groups=('base-hurd')
