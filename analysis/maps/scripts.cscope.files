@@ -1,4 +1,5 @@
 scripts/assemble-bootstrap-image.sh
+scripts/build-cross-binutils.sh
 scripts/build-gnumach.sh
 scripts/build-hurd-headers.sh
 scripts/build-mig.sh
@@ -8,10 +9,13 @@ scripts/convert-pkgbuild-arch.sh
 scripts/fetch-debian-inspiration.sh
 scripts/fetch-sources.sh
 scripts/gen-maps.sh
+scripts/guest-inject-ssh.sh
 scripts/guest-native-playbook.sh
+scripts/guest-s3-run.sh
 scripts/guest-shell.sh
 scripts/host-preflight.sh
 scripts/host-tooling-scan.sh
+scripts/import-guest-artifacts.sh
 scripts/legacy-capture.sh
 scripts/link-local-dev-assets.sh
 scripts/mkhurdroot.sh
