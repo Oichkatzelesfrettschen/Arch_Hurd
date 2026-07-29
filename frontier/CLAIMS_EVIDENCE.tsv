@@ -35,4 +35,7 @@ C-pure-fetch-default	make fetch defaults to Savannah git clones only	fetch-sourc
 C-alpm-hurd-x86-64	Product ALPM architecture is hurd_x86_64	IDENTITY.md + pacman fragment	known	product PKGBUILDs use plain x86_64	rg hurd_x86_64 config packages	config/target/pacman.conf.fragment	orchestrator
 C-legacy-surface	legacy/ INTEGRITY.tsv schema exists and product ignores legacy binaries	verify-legacy.sh	known	product scripts install from legacy/binary-packages	make legacy-gate	legacy/INTEGRITY.tsv	orchestrator
 C-stage-graph	Bootstrap stages 0-14 documented with current progress	STAGE_GRAPH.md	known	doc missing	test -f docs/architecture/STAGE_GRAPH.md	docs/architecture/STAGE_GRAPH.md	orchestrator
-C-netbsd11-future	NetBSD 11 rump is future donor not R0.1 blocker	ORACLE_PINS future-donor	known	release blocked on DRM	awk future-donor frontier/ORACLE_PINS.tsv	frontier/ORACLE_PINS.tsv	orchestrator	
+C-netbsd11-future	NetBSD 11 rump is future donor not R0.1 blocker	ORACLE_PINS future-donor	known	release blocked on DRM	awk future-donor frontier/ORACLE_PINS.tsv	frontier/ORACLE_PINS.tsv	orchestrator
+C-hurd-headers-stage0	stage0 installs pure hurd headers (copy-first)	make hurd-headers	known	HURD_HEADERS.ok missing	test -f build/stage0/HURD_HEADERS.ok	build/stage0/HURD_HEADERS.ok	orchestrator	97+ headers
+C-bootstrap-tarball	make image produces bootstrap root tarball with gnumach	assemble-bootstrap-image.sh	known	no tarball under build/images	make image; ls build/images	build/images/	orchestrator	not full M0 image
+C-guest-share	guest-share syncs pure Savannah trees for strategy a	guest-native-playbook.sh sync-share	known	share missing after sync	make guest-share	build/guest-share/MANIFEST.txt	orchestrator	

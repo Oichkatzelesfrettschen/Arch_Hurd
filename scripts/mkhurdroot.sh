@@ -100,10 +100,10 @@ mkdir -p "$DEST/var/lib/archhurd"
   fi
 } > "$DEST/var/lib/archhurd/root-stage"
 
-# Inventory
+# Inventory (avoid SIGPIPE under pipefail when truncating)
 {
   echo "# mkhurdroot inventory"
-  find "$DEST" -printf '%y %p\n' | sort | head -200
+  find "$DEST" -printf '%y %p\n' | sort | head -200 || true
 } > "$DEST/var/lib/archhurd/inventory.txt"
 
 echo "mkhurdroot: staged $DEST"

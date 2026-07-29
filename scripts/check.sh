@@ -56,6 +56,7 @@ for d in \
   docs/architecture/GLIBC_STRATEGY.md \
   docs/architecture/IDENTITY.md \
   docs/architecture/STAGE_GRAPH.md \
+  docs/roadmap/OPEN_STEPS.md \
   packages/base/PACKAGE_SET.md
  do
   test -f "$d" || { echo "missing $d" >&2; fail=1; }

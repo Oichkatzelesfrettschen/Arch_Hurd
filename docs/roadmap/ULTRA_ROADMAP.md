@@ -20,6 +20,9 @@
 | gnumach ELF64 pure build | **done** (P3) |
 | Root layout + empty local repo | **done** (scaffold) |
 | Multi-lane host/guest tooling | **done** |
+| hurd-headers stage0 (copy-first) | **done** |
+| bootstrap root tarball (`make image`) | **done** (partial) |
+| guest-share + playbook for strategy a | **done** |
 | glibc + hurd userspace product build | **open** |
 | Boot + pacman M0 evidence | **open** |
 | rump DRM/KMS | **deferred** (not R0.1) |

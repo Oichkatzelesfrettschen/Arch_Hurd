@@ -1,11 +1,12 @@
 # Arch GNU/Hurd rebootstrap -- top-level gates
-.PHONY: help plan check maps status preflight fetch stage0 mig gnumach root repo all-offline clean smoke scan-tools link-assets guest-hint guest-shell guest-shell-run pure-gnu-gate identity-gate legacy-gate test
+.PHONY: help plan check maps status preflight fetch stage0 mig gnumach hurd-headers root repo image all-offline clean smoke scan-tools link-assets guest-hint guest-shell guest-shell-run guest-playbook guest-share pure-gnu-gate identity-gate legacy-gate test
 
 help:
 	@echo "targets:"
 	@echo "  plan status check test maps preflight scan-tools link-assets"
-	@echo "  guest-shell guest-shell-run guest-hint pure-gnu-gate identity-gate legacy-gate"
-	@echo "  fetch stage0 mig gnumach root repo all-offline"
+	@echo "  guest-shell guest-shell-run guest-playbook guest-share guest-hint"
+	@echo "  pure-gnu-gate identity-gate legacy-gate"
+	@echo "  fetch stage0 mig gnumach hurd-headers root repo image all-offline"
 	@echo "  smoke  (needs IMAGE=... ARCH_HURD_QEMU_ACK=yes)"
 
 plan:
@@ -69,15 +70,27 @@ mig: stage0
 gnumach: mig
 	bash scripts/build-gnumach.sh
 
+hurd-headers: stage0
+	bash scripts/build-hurd-headers.sh
+
 root:
 	bash scripts/mkhurdroot.sh
 
 repo:
 	bash scripts/seed-local-repo.sh
 
+image:
+	bash scripts/assemble-bootstrap-image.sh
+
+guest-playbook:
+	bash scripts/guest-native-playbook.sh emit
+
+guest-share:
+	bash scripts/guest-native-playbook.sh sync-share
+
 # Offline-ish chain: does not require QEMU ACK
-all-offline: fetch stage0 mig root repo
-	@echo "all-offline complete (kernel: make gnumach)"
+all-offline: fetch stage0 mig gnumach hurd-headers root repo image guest-playbook
+	@echo "all-offline complete (kernel+headers+bootstrap tarball)"
 
 smoke:
 	@test -n "$(IMAGE)" || (echo "set IMAGE=/path/to.img" >&2; exit 2)

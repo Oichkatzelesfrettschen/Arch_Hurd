@@ -1,0 +1,22 @@
+[platform]
+package_arch = "hurd_x86_64"
+gnu_tuple = "x86_64-gnu"
+
+[bootstrap]
+profiles = ["headers", "startfiles", "full"]
+runs_target_binaries = false
+
+[dependencies.headers]
+build = ["gnumach-headers", "hurd-headers", "mig"]
+host = []
+target = []
+
+[dependencies.full]
+build = ["gnumach-headers", "hurd-headers", "mig", "archhurd-cross-gcc"]
+host = []
+target = []
+
+[provenance]
+origin = "gnu-hurd-glibc"
+upstream_status = "tracking"
+strategy = "guest-native-a"

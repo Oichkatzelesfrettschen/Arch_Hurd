@@ -1,0 +1,6 @@
+status=ok
+base=pure-gnu-savannah
+mode=copy-first
+hurd_sha=308b36dbe2b533717a379402d4243d0224327846
+header_files=97
+log=/home/eirikr/Github/Arch_Hurd/evidence/captures/hurd-headers-20260729T052855Z.log

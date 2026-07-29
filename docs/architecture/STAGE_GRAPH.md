@@ -42,10 +42,12 @@ project `build/sysroots/x86_64-gnu/` (or `/srv/archhurd/...` on dedicated hosts)
 
 | Stage | Status |
 |---|---|
-| 0-1 | **done** (policy, pins, gates) |
-| 3-4 partial | stage0 headers + mig **done** on host |
+| 0-1 | **done** (policy, pins, gates, identity, legacy) |
+| 3 | mig stage0 **done** |
+| 4 | gnumach headers **done**; hurd-headers via `make hurd-headers` |
 | 9 | pure gnumach ELF64 **done** |
-| 5-8, 10-14 | **open** |
+| 12 partial | bootstrap tarball via `make image` (full disk needs root/mkfs) |
+| 2, 5-8, 10-11, 13-14 | **open** (see `docs/roadmap/OPEN_STEPS.md`) |
 
 ## Package directory pattern (future)
 

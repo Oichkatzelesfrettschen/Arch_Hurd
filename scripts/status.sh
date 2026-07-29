@@ -48,6 +48,17 @@ elif [[ -f build/stage0/STAGE0_HEADERS.ok ]]; then
 else
   echo "gnumach: not built"
 fi
+if [[ -f build/stage0/HURD_HEADERS.ok ]]; then
+  nh=$(awk -F= '/^header_files=/{print $2}' build/stage0/HURD_HEADERS.ok 2>/dev/null || echo '?')
+  echo "hurd-headers: OK ($nh files)"
+else
+  echo "hurd-headers: absent (make hurd-headers)"
+fi
+if compgen -G 'build/images/archhurd-bootstrap-root.tar.*' >/dev/null; then
+  echo "bootstrap-tarball: PRESENT"
+else
+  echo "bootstrap-tarball: absent (make image)"
+fi
 
 # multi-lane readiness
 echo

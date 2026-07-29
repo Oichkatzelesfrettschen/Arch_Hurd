@@ -1,0 +1,22 @@
+[platform]
+package_arch = "hurd_x86_64"
+gnu_tuple = "x86_64-gnu"
+
+[bootstrap]
+profiles = ["headers", "full"]
+runs_target_binaries = true
+
+[dependencies.headers]
+build = ["mig", "gnumach-headers"]
+host = []
+target = []
+
+[dependencies.full]
+build = ["mig", "gnumach", "glibc"]
+host = []
+target = ["glibc"]
+
+[provenance]
+origin = "gnu-savannah"
+upstream_status = "tracking"
+note = "rumpdisk/rumpnet in-tree; guest-native full build preferred"
