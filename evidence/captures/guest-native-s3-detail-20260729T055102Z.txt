@@ -1,0 +1,184 @@
+Warning: Permanently added '[127.0.0.1]:2222' (ED25519) to the list of known hosts.
+checking build system type... x86_64-unknown-gnu0.9
+checking host system type... x86_64-unknown-gnu0.9
+checking for a BSD-compatible install... /bin/bash /root/archhurd-src/hurd/install-sh -c -C
+checking for gawk... gawk
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C23 features... none needed
+checking for ld... ld
+checking for objcopy... objcopy
+checking for ar... ar
+checking for ranlib... ranlib
+checking for mig... mig
+checking for ld --version-script... yes
+checking for libio... no
+checking for file_exec_paths... yes
+checking for exec_exec_paths... yes
+checking for _hurd_exec_paths... yes
+checking for _hurd_libc_proc_init... yes
+checking for mach_port_set_ktype... yes
+checking for file_utimens... yes
+checking for crypt in -lcrypt... no
+checking for -fgnu89-inline... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for BZ2_bzCompress in -lbz2... no
+checking for deflate in -lz... no
+checking boot store types... device remap
+checking for initscr in -lncursesw... no
+checking for pkg-config... no
+checking for xkbcommon... no
+checking for libtirpc... no
+checking for libdaemon... no
+checking for struct thread_sched_info.last_processor... yes
+checking for struct mapped_time_value.time_value.seconds... yes
+checking for libblkid... no
+checking for libgcrypt... no
+checking for liblwip... no
+checking for libpciaccess... no
+checking for acpi/acpi_init.h... no
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makeconf
+config.status: creating Makefile
+config.status: creating acpi/Makefile
+config.status: creating auth/Makefile
+config.status: creating benchmarks/Makefile
+config.status: creating boot/Makefile
+config.status: creating config/Makefile
+config.status: creating console-client/Makefile
+config.status: creating console/Makefile
+config.status: creating daemons/Makefile
+config.status: creating defpager/Makefile
+config.status: creating devnode/Makefile
+config.status: creating doc/Makefile
+config.status: creating eth-multiplexer/Makefile
+config.status: creating exec/Makefile
+config.status: creating ext2fs/Makefile
+config.status: creating fatfs/Makefile
+config.status: creating fstests/Makefile
+config.status: creating ftpfs/Makefile
+config.status: creating hostmux/Makefile
+config.status: creating hurd/Makefile
+config.status: creating include/Makefile
+config.status: creating init/Makefile
+config.status: creating isofs/Makefile
+config.status: creating libbpf/Makefile
+config.status: creating libcons/Makefile
+config.status: creating libdiskfs/Makefile
+config.status: creating libfshelp-tests/Makefile
+config.status: creating libfshelp/Makefile
+config.status: creating libftpconn/Makefile
+config.status: creating libhurd-slab/Makefile
+config.status: creating libhurdbugaddr/Makefile
+config.status: creating libihash/Makefile
+config.status: creating libiohelp/Makefile
+config.status: creating libirqhelp/Makefile
+config.status: creating libmachdev/Makefile
+config.status: creating libnetfs/Makefile
+config.status: creating libpager/Makefile
+config.status: creating libpipe/Makefile
+config.status: creating libports/Makefile
+config.status: creating libps/Makefile
+config.status: creating libshouldbeinlibc/Makefile
+config.status: creating libstore/Makefile
+config.status: creating libtrivfs/Makefile
+config.status: creating login/Makefile
+config.status: creating lwip/Makefile
+config.status: creating mach-defpager/Makefile
+config.status: creating nfs/Makefile
+config.status: creating nfsd/Makefile
+config.status: creating pci-arbiter/Makefile
+config.status: creating pfinet/Makefile
+config.status: creating pflocal/Makefile
+config.status: creating proc/Makefile
+config.status: creating procfs/Makefile
+config.status: creating release/Makefile
+config.status: creating rtc/Makefile
+config.status: creating rumpdisk/Makefile
+config.status: creating rumpnet/Makefile
+config.status: creating shutdown/Makefile
+config.status: creating startup/Makefile
+config.status: creating storeio/Makefile
+config.status: creating sutils/Makefile
+config.status: creating term/Makefile
+config.status: creating tmpfs/Makefile
+config.status: creating trans/Makefile
+config.status: creating usermux/Makefile
+config.status: creating utils/Makefile
+config.status: creating daemons/runsystem.hurd.sh
+hurd_configure_noparted_exit=0
+=== glibc make error summary ===
+645:../sysdeps/mach/sysdep.h:62:2: error: #error SNARF_ARGS not defined by sysdeps/mach/MACHINE/sysdep.h
+648:../sysdeps/mach/sysdep.h:70:2: error: #error CALL_WITH_SP not defined by sysdeps/mach/MACHINE/sysdep.h
+651:../sysdeps/mach/sysdep.h:82:2: error: #error stack direction unspecified
+=== mig ===
+/usr/bin/mig
++-- Desired=Unknown/Install/Remove/Purge/Hold
+|+- Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+||+ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||| Name                   Version              Architecture Description
++++-======================-====================-============-===================================
+ii  gnumach-dev:hurd-amd64 2:1.8+git20260224-11 hurd-amd64   GNU version of the Mach microkernel
+ii  mig                    1.8+git20231217-11   hurd-amd64   GNU Mach Interface Generator
+=== headers ===
+default_pager.h
+error.h
+exc.h
+exc_server.h
+gnumach.h
+mach.h
+mach4.h
+mach_host.h
+mach_interface.h
+mach_port.h
+auth.h
+auth_reply.h
+auth_request.h
+crash.h
+exec.h
+exec_startup.h
+fd.h
+fs.h
+fsys.h
+id.h
+=== config status ===
+configure_exit=0
+make_exit=2
+checking for _hurd_exec_paths... yes
+checking for _hurd_libc_proc_init... yes
+hurd_configure_exit=1
+total 1228
+drwxr-xr-x 2 root root   4096 Jul 29 06:51 .
+drwx------ 7 root root   4096 Jul 29 06:50 ..
+-rw-r--r-- 1 root root  18835 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root    113 Jul 29 06:49 glibc-build.log
+-rw-r--r-- 1 root root   6326 Jul 29 06:50 glibc-configure.txt
+-rw-r--r-- 1 root root 376563 Jul 29 06:50 glibc-make.txt
+-rw-r--r-- 1 root root      0 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root   4872 Jul 29 06:51 hurd-configure-noparted.txt
+-rw-r--r-- 1 root root   1644 Jul 29 06:50 hurd-configure.txt
+-rw-r--r-- 1 root root   7607 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root   5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root   5703 Jul 29 06:49 s3-bg.out
+-rw-r--r-- 1 root root   7607 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root      5 Jul 29 06:50 s3.pid
+-rw-r--r-- 1 root root 385898 Jul 29 06:50 s3b-nohup.out
+-rw-r--r-- 1 root root 385898 Jul 29 06:50 s3b.log
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/wd0s2      3.0G  2.0G  887M  70% /

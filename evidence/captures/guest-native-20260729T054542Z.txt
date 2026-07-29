@@ -1,0 +1,838 @@
+utc=2026-07-29T05:45:42Z
+stage=S3
+image_overlay=/home/eirikr/Github/Arch_Hurd/build/guest-run/overlay.qcow2
+ssh_method=pubkey
+ssh_ok=1
+guest_up
+GNU debian 0.9 GNU-Mach 1.8+git20260224-up-amd64/Hurd-0.9 x86_64 GNU
+uid=0(root) gid=0(root) groups=0(root)
+== inventory ==
+/usr/bin/gcc
+gcc (Debian 15.2.0-12) 15.2.0
+/usr/bin/make
+GNU Make 4.4.1
+== inventory cont ==
++-- Desired=Unknown/Install/Remove/Purge/Hold
+|+- Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+||+ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||| Name               Version             Architecture Description
++++-==================-===================-============-==============================================
+ii  build-essential    12.12               hurd-amd64   Informational list of build-essential packages
+un  gnumach            <none>              <none>       (no description available)
+ii  hurd               1:0.9.git20251029-7 hurd-amd64   GNU Hurd
+ii  libc0.3:hurd-amd64 2.42-14~hurd.1      hurd-amd64   GNU C Library: Shared libraries
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/wd0s2      3.0G  1.5G  1.5G  50% /
+1
+acpi
+acpi.static
+auth
+auth.static
+console
+crash
+cvsfs
+devnode
+eth-multiplexer
+exec
+exec.static
+ext2fs
+ext2fs.static
+fakeroot
+fatfs
+fifo
+filter
+firmlink
+ftpfs
+fwd
+hello
+hello-mt
+hostmux
+httpfs
+ifsock
+/usr/bin/python3
+252M	/root/archhurd-src/glibc
+22M	/root/archhurd-src/gnumach
+19M	/root/archhurd-src/hurd
+820K	/root/archhurd-src/mig
+gnumach=missing
+mig=missing
+hurd=missing
+glibc=missing
+total 48
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root 3056 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root 2470 Jul 29 06:49 glibc-configure.txt
+-rw-r--r-- 1 root root   61 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root 7607 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root 7607 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+---
+== apt-deps.txt ==
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Solving dependencies...
+The following additional packages will be installed:
+  autotools-dev install-info libauthen-sasl-perl libclone-perl
+  libcrypt-urandom-perl libdata-dump-perl libencode-locale-perl
+  libfile-listing-perl libfl-dev libfl2 libfont-afm-perl libhtml-form-perl
+  libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl
+  libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl
+  libhttp-message-perl libhttp-negotiate-perl libintl-perl libintl-xs-perl
+  libio-compress-brotli-perl libio-html-perl libio-socket-ssl-perl
+  liblocale-gettext-perl liblwp-mediatypes-perl liblwp-protocol-https-perl
+  libmailtools-perl libnet-http-perl libnet-smtp-ssl-perl libnet-ssleay-perl
+  libperl5.42 libtext-charwidth-perl libtext-iconv-perl libtext-unidecode-perl
+  libtimedate-perl libtry-tiny-perl liburi-perl libwww-perl
+  libwww-robotrules-perl libxml-libxml-perl libxml-namespacesupport-perl
+  libxml-parser-perl libxml-sax-base-perl libxml-sax-expat-perl
+  libxml-sax-perl m4 perl perl-base perl-modules-5.42 perl-openssl-defaults
+  tex-common texinfo-lib
+Suggested packages:
+  autoconf-archive gnu-standards autoconf-doc libtool bison-doc flex-doc
+  gawk-doc autopoint gettext-doc libasprintf-dev libgettextpo-dev gnulib-l10n
+  libdigest-hmac-perl libgssapi-perl libcrypt-ssleay-perl libsub-name-perl
+  libbusiness-isbn-perl libmime-base32-perl libregexp-ipv6-perl
+  libauthen-ntlm-perl libxml-sax-expatxs-perl m4-doc debhelper texlive-base
+  texlive-latex-base texlive-plain-generic texlive-fonts-recommended
+The following NEW packages will be installed:
+  autoconf automake autotools-dev bison flex gawk gettext libauthen-sasl-perl
+  libclone-perl libcrypt-urandom-perl libdata-dump-perl libencode-locale-perl
+  libfile-listing-perl libfl-dev libfl2 libfont-afm-perl libhtml-form-perl
+  libhtml-format-perl libhtml-parser-perl libhtml-tagset-perl
+  libhtml-tree-perl libhttp-cookies-perl libhttp-daemon-perl libhttp-date-perl
+  libhttp-message-perl libhttp-negotiate-perl libintl-perl libintl-xs-perl
+  libio-compress-brotli-perl libio-html-perl libio-socket-ssl-perl
+  liblwp-mediatypes-perl liblwp-protocol-https-perl libmailtools-perl
+  libnet-http-perl libnet-smtp-ssl-perl libnet-ssleay-perl libperl5.42
+  libtext-unidecode-perl libtimedate-perl libtry-tiny-perl liburi-perl
+  libwww-perl libwww-robotrules-perl libxml-libxml-perl
+  libxml-namespacesupport-perl libxml-parser-perl libxml-sax-base-perl
+  libxml-sax-expat-perl libxml-sax-perl m4 perl-modules-5.42
+  perl-openssl-defaults tex-common texinfo texinfo-lib
+The following packages will be upgraded:
+  install-info liblocale-gettext-perl libtext-charwidth-perl
+  libtext-iconv-perl perl perl-base
+6 upgraded, 56 newly installed, 0 to remove and 311 not upgraded.
+Need to get 1681 kB/21.7 MB of archives.
+After this operation, 93.7 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian-ports sid/main hurd-amd64 gettext hurd-amd64 0.23.2-1 [1681 kB]
+== glibc-configure.txt ==
+checking build system type... x86_64-unknown-gnu0.9
+checking host system type... x86_64-unknown-gnu0.9
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nios2 powerpc riscv s390 sh sparc x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking if compiler warns about alias for function with incompatible types... yes
+checking sysdep dirs... sysdeps/mach/hurd sysdeps/gnu sysdeps/unix/bsd sysdeps/unix/inet sysdeps/mach sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/unix sysdeps/posix sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... no
+checking for makeinfo... no
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... no
+checking for bison... no
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
+== hurd-autoreconf.txt ==
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
+== s3-20260729T054737Z.log ==
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nios2 powerpc riscv s390 sh sparc x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking if compiler warns about alias for function with incompatible types... yes
+checking sysdep dirs... sysdeps/mach/hurd sysdeps/gnu sysdeps/unix/bsd sysdeps/unix/inet sysdeps/mach sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/unix sysdeps/posix sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... no
+checking for makeinfo... no
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... no
+checking for bison... no
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
+configure_exit=1
+no Makefile after configure
+=== hurd autoreconf ===
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
+S3 guest build end 2026-07-29T05:49:06+00:00
+LOG=/root/archhurd-logs/s3-20260729T054737Z.log
+total 48
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root   24 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root 2470 Jul 29 06:49 glibc-configure.txt
+-rw-r--r-- 1 root root   61 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+== s3-20260729T054838Z.log ==
+checking sysdep dirs... sysdeps/mach/hurd sysdeps/gnu sysdeps/unix/bsd sysdeps/unix/inet sysdeps/mach sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/unix sysdeps/posix sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... no
+checking for makeinfo... no
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... no
+checking for bison... no
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
++ echo configure_exit=1
+configure_exit=1
++ [[ -f Makefile ]]
++ echo 'no Makefile after configure'
+no Makefile after configure
++ mkdir -p /root/archhurd-build/hurd
++ cd /root/archhurd-build/hurd
++ [[ -x /root/archhurd-src/hurd/configure ]]
++ [[ -f /root/archhurd-src/hurd/configure.ac ]]
++ echo '=== hurd autoreconf ==='
+=== hurd autoreconf ===
++ tee /root/archhurd-logs/hurd-autoreconf.txt
++ tail -30
++ cd /root/archhurd-src/hurd
++ autoreconf -fi
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
++ CFG=/root/archhurd-src/hurd/configure
++ [[ -n /root/archhurd-src/hurd/configure ]]
++ [[ -x /root/archhurd-src/hurd/configure ]]
+++ date -u -Iseconds
++ echo 'S3 guest build end 2026-07-29T05:48:43+00:00'
+S3 guest build end 2026-07-29T05:48:43+00:00
++ echo LOG=/root/archhurd-logs/s3-20260729T054838Z.log
+LOG=/root/archhurd-logs/s3-20260729T054838Z.log
++ ls -la /root/archhurd-logs
+total 36
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root 2470 Jul 29 06:48 glibc-configure.txt
+-rw-r--r-- 1 root root  107 Jul 29 06:48 hurd-autoreconf.txt
+-rw-r--r-- 1 root root  594 Jul 29 06:47 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 4893 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root  594 Jul 29 06:47 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+== s3-nohup.out ==
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nios2 powerpc riscv s390 sh sparc x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking if compiler warns about alias for function with incompatible types... yes
+checking sysdep dirs... sysdeps/mach/hurd sysdeps/gnu sysdeps/unix/bsd sysdeps/unix/inet sysdeps/mach sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/unix sysdeps/posix sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... no
+checking for makeinfo... no
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... no
+checking for bison... no
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
+configure_exit=1
+no Makefile after configure
+=== hurd autoreconf ===
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
+S3 guest build end 2026-07-29T05:49:06+00:00
+LOG=/root/archhurd-logs/s3-20260729T054737Z.log
+total 48
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root   24 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root 2470 Jul 29 06:49 glibc-configure.txt
+-rw-r--r-- 1 root root   61 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+== s3.pid ==
+799
+total 72
+drwxr-xr-x 2 root root  4096 Jul 29 06:49 .
+drwx------ 7 root root  4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root 18835 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root    32 Jul 29 06:49 glibc-build.log
+-rw-r--r-- 1 root root   373 Jul 29 06:49 glibc-configure.txt
+-rw-r--r-- 1 root root    61 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root  7607 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root  5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root   405 Jul 29 06:49 s3-bg.out
+-rw-r--r-- 1 root root  7607 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root     3 Jul 29 06:49 s3.pid
+---
+== /root/archhurd-logs/apt-deps.txt ==
+Setting up libcrypt-urandom-perl (0.55-1+b1) ...
+Setting up libtry-tiny-perl (0.32-1) ...
+Setting up libxml-namespacesupport-perl (1.12-2) ...
+Setting up libnet-http-perl (6.24-1) ...
+Setting up libencode-locale-perl (1.05-3) ...
+Setting up texinfo-lib (7.3-2+b1) ...
+Setting up libintl-xs-perl (1.37-1+b1) ...
+Setting up libxml-sax-base-perl (1.09-3) ...
+Setting up libwww-robotrules-perl (6.03-1) ...
+Setting up libhtml-parser-perl:hurd-amd64 (3.83-2+b1) ...
+Setting up libio-socket-ssl-perl (2.099-1) ...
+Setting up libhttp-message-perl (7.02-1) ...
+Setting up libhtml-form-perl (6.13-1) ...
+Setting up libhttp-negotiate-perl (6.01-2) ...
+Setting up libhttp-cookies-perl (6.11-1) ...
+Setting up libauthen-sasl-perl (2.2000-1) ...
+Setting up libhtml-tree-perl (5.07-3) ...
+Setting up libhtml-format-perl (2.16-2) ...
+Setting up libxml-sax-perl (1.02+dfsg-5) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::PurePerl with priority 10...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Creating config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libnet-smtp-ssl-perl (1.04-2) ...
+Setting up libmailtools-perl (2.22-1) ...
+Setting up libxml-libxml-perl (2.0207+dfsg+really+2.0134-8+b1) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX::Parser with priority 50...
+update-perl-sax-parsers: Registering Perl SAX parser XML::LibXML::SAX with priority 50...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Setting up libhttp-daemon-perl (6.17-1) ...
+Setting up texinfo (7.3-2) ...
+Setting up liblwp-protocol-https-perl (6.15-1) ...
+Setting up libwww-perl (6.83-1) ...
+Setting up libxml-parser-perl (2.47-2+b1) ...
+Setting up libxml-sax-expat-perl (0.51-3) ...
+update-perl-sax-parsers: Registering Perl SAX parser XML::SAX::Expat with priority 50...
+update-perl-sax-parsers: Updating overall Perl SAX parser modules info file...
+Replacing config file /etc/perl/XML/SAX/ParserDetails.ini with new version
+Processing triggers for libc-bin (2.42-14~hurd.1) ...
+Processing triggers for man-db (2.13.1-1) ...
+== /root/archhurd-logs/glibc-build.log ==
+start 2026-07-29T05:49:42+00:00
+== /root/archhurd-logs/glibc-configure.txt ==
+checking build system type... x86_64-unknown-gnu0.9
+checking host system type... x86_64-unknown-gnu0.9
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... == /root/archhurd-logs/hurd-autoreconf.txt ==
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
+== /root/archhurd-logs/s3-20260729T054737Z.log ==
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... no
+checking for makeinfo... no
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... no
+checking for bison... no
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
+configure_exit=1
+no Makefile after configure
+=== hurd autoreconf ===
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
+S3 guest build end 2026-07-29T05:49:06+00:00
+LOG=/root/archhurd-logs/s3-20260729T054737Z.log
+total 48
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root   24 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root 2470 Jul 29 06:49 glibc-configure.txt
+-rw-r--r-- 1 root root   61 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+== /root/archhurd-logs/s3-20260729T054838Z.log ==
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
++ echo configure_exit=1
+configure_exit=1
++ [[ -f Makefile ]]
++ echo 'no Makefile after configure'
+no Makefile after configure
++ mkdir -p /root/archhurd-build/hurd
++ cd /root/archhurd-build/hurd
++ [[ -x /root/archhurd-src/hurd/configure ]]
++ [[ -f /root/archhurd-src/hurd/configure.ac ]]
++ echo '=== hurd autoreconf ==='
+=== hurd autoreconf ===
++ tee /root/archhurd-logs/hurd-autoreconf.txt
++ tail -30
++ cd /root/archhurd-src/hurd
++ autoreconf -fi
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
++ CFG=/root/archhurd-src/hurd/configure
++ [[ -n /root/archhurd-src/hurd/configure ]]
++ [[ -x /root/archhurd-src/hurd/configure ]]
+++ date -u -Iseconds
++ echo 'S3 guest build end 2026-07-29T05:48:43+00:00'
+S3 guest build end 2026-07-29T05:48:43+00:00
++ echo LOG=/root/archhurd-logs/s3-20260729T054838Z.log
+LOG=/root/archhurd-logs/s3-20260729T054838Z.log
++ ls -la /root/archhurd-logs
+total 36
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root 2470 Jul 29 06:48 glibc-configure.txt
+-rw-r--r-- 1 root root  107 Jul 29 06:48 hurd-autoreconf.txt
+-rw-r--r-- 1 root root  594 Jul 29 06:47 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 4893 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root  594 Jul 29 06:47 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+== /root/archhurd-logs/s3-bg.out ==
+start 2026-07-29T05:49:42+00:00
+checking build system type... x86_64-unknown-gnu0.9
+checking host system type... x86_64-unknown-gnu0.9
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... == /root/archhurd-logs/s3-nohup.out ==
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... no
+checking for makeinfo... no
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... no
+checking for bison... no
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+configure: error: 
+*** These critical programs are missing or too old: gawk bison
+*** Check the INSTALL file for required versions.
+configure_exit=1
+no Makefile after configure
+=== hurd autoreconf ===
+/root/archhurd-s3.sh: line 43: autoreconf: command not found
+S3 guest build end 2026-07-29T05:49:06+00:00
+LOG=/root/archhurd-logs/s3-20260729T054737Z.log
+total 48
+drwxr-xr-x 2 root root 4096 Jul 29 06:48 .
+drwx------ 7 root root 4096 Jul 29 06:47 ..
+-rw-r--r-- 1 root root   24 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root 2470 Jul 29 06:49 glibc-configure.txt
+-rw-r--r-- 1 root root   61 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root 5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root 7103 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root    4 Jul 29 06:47 s3.pid
+== /root/archhurd-logs/s3.pid ==
+$!
+utc=2026-07-29T05:49:42Z
+stage=S4_import_scaffold
+import_dir=/home/eirikr/Github/Arch_Hurd/build/guest-import
+logs:
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/apt-deps.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-build.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-configure.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-autoreconf.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-20260729T054737Z.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-20260729T054838Z.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-bg.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-nohup.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3.pid
+glibc_configure_ok=0
+hurd_configure_ok=0
+glibc_make_ok=0
+--- guest-share MANIFEST ---
+utc=2026-07-29T05:41:26Z
+share=/home/eirikr/Github/Arch_Hurd/build/guest-share
+gnumach=aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8
+mig=cb48044b30fcfe10529ecc1129dd68e93ed73835
+hurd=308b36dbe2b533717a379402d4243d0224327846
+glibc=ab9a3c905ae0ce0b72165106bccb827974bc4092
+glibc_files=16930
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/glibc/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/hurd/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/gnumach/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/mig/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/rumpdisk/GUEST_IMPORT.txt
+--- S4-S8 next gates ---
+S4: install pure hurd servers into product root once glibc+hurd build
+S5: wire rumpdisk; document noide if IDE path hangs
+S6: pacman 7.x on Hurd (PKGBUILD packages/base/pacman)
+S7: assemble disk image (ext2 + translators)
+S8: QEMU smoke + evidence/captures/m0-*
+--- S2 cross-binutils ---
+status=ok
+target=x86_64-gnu
+prefix=/home/eirikr/Github/Arch_Hurd/build/cross
+binutils_ver=2.43.1
+tarball_sha256=13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
+log=/home/eirikr/Github/Arch_Hurd/evidence/captures/cross-binutils-20260729T053624Z.log
+Traceback (most recent call last):
+  File "<stdin>", line 18, in <module>
+  File "/usr/lib/python3.14/pathlib/__init__.py", line 810, in write_text
+    return f.write(data)
+           ~~~~~~~^^^^^^
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 1057-1058: ordinal not in range(128)
+Warning: Permanently added '[127.0.0.1]:2222' (ED25519) to the list of known hosts.
+checking build system type... x86_64-unknown-gnu0.9
+checking host system type... x86_64-unknown-gnu0.9
+checking for a BSD-compatible install... /bin/bash /root/archhurd-src/hurd/install-sh -c -C
+checking for gawk... gawk
+checking for a sed that does not truncate output... /usr/bin/sed
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C23 features... none needed
+checking for ld... ld
+checking for objcopy... objcopy
+checking for ar... ar
+checking for ranlib... ranlib
+checking for mig... mig
+checking for ld --version-script... yes
+checking for libio... no
+checking for file_exec_paths... yes
+checking for exec_exec_paths... yes
+checking for _hurd_exec_paths... yes
+checking for _hurd_libc_proc_init... yes
+checking for mach_port_set_ktype... yes
+checking for file_utimens... yes
+checking for crypt in -lcrypt... no
+checking for -fgnu89-inline... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for BZ2_bzCompress in -lbz2... no
+checking for deflate in -lz... no
+checking boot store types... device remap
+checking for initscr in -lncursesw... no
+checking for pkg-config... no
+checking for xkbcommon... no
+checking for libtirpc... no
+checking for libdaemon... no
+checking for struct thread_sched_info.last_processor... yes
+checking for struct mapped_time_value.time_value.seconds... yes
+checking for libblkid... no
+checking for libgcrypt... no
+checking for liblwip... no
+checking for libpciaccess... no
+checking for acpi/acpi_init.h... no
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makeconf
+config.status: creating Makefile
+config.status: creating acpi/Makefile
+config.status: creating auth/Makefile
+config.status: creating benchmarks/Makefile
+config.status: creating boot/Makefile
+config.status: creating config/Makefile
+config.status: creating console-client/Makefile
+config.status: creating console/Makefile
+config.status: creating daemons/Makefile
+config.status: creating defpager/Makefile
+config.status: creating devnode/Makefile
+config.status: creating doc/Makefile
+config.status: creating eth-multiplexer/Makefile
+config.status: creating exec/Makefile
+config.status: creating ext2fs/Makefile
+config.status: creating fatfs/Makefile
+config.status: creating fstests/Makefile
+config.status: creating ftpfs/Makefile
+config.status: creating hostmux/Makefile
+config.status: creating hurd/Makefile
+config.status: creating include/Makefile
+config.status: creating init/Makefile
+config.status: creating isofs/Makefile
+config.status: creating libbpf/Makefile
+config.status: creating libcons/Makefile
+config.status: creating libdiskfs/Makefile
+config.status: creating libfshelp-tests/Makefile
+config.status: creating libfshelp/Makefile
+config.status: creating libftpconn/Makefile
+config.status: creating libhurd-slab/Makefile
+config.status: creating libhurdbugaddr/Makefile
+config.status: creating libihash/Makefile
+config.status: creating libiohelp/Makefile
+config.status: creating libirqhelp/Makefile
+config.status: creating libmachdev/Makefile
+config.status: creating libnetfs/Makefile
+config.status: creating libpager/Makefile
+config.status: creating libpipe/Makefile
+config.status: creating libports/Makefile
+config.status: creating libps/Makefile
+config.status: creating libshouldbeinlibc/Makefile
+config.status: creating libstore/Makefile
+config.status: creating libtrivfs/Makefile
+config.status: creating login/Makefile
+config.status: creating lwip/Makefile
+config.status: creating mach-defpager/Makefile
+config.status: creating nfs/Makefile
+config.status: creating nfsd/Makefile
+config.status: creating pci-arbiter/Makefile
+config.status: creating pfinet/Makefile
+config.status: creating pflocal/Makefile
+config.status: creating proc/Makefile
+config.status: creating procfs/Makefile
+config.status: creating release/Makefile
+config.status: creating rtc/Makefile
+config.status: creating rumpdisk/Makefile
+config.status: creating rumpnet/Makefile
+config.status: creating shutdown/Makefile
+config.status: creating startup/Makefile
+config.status: creating storeio/Makefile
+config.status: creating sutils/Makefile
+config.status: creating term/Makefile
+config.status: creating tmpfs/Makefile
+config.status: creating trans/Makefile
+config.status: creating usermux/Makefile
+config.status: creating utils/Makefile
+config.status: creating daemons/runsystem.hurd.sh
+hurd_configure_noparted_exit=0
+=== glibc make error summary ===
+645:../sysdeps/mach/sysdep.h:62:2: error: #error SNARF_ARGS not defined by sysdeps/mach/MACHINE/sysdep.h
+648:../sysdeps/mach/sysdep.h:70:2: error: #error CALL_WITH_SP not defined by sysdeps/mach/MACHINE/sysdep.h
+651:../sysdeps/mach/sysdep.h:82:2: error: #error stack direction unspecified
+=== mig ===
+/usr/bin/mig
++-- Desired=Unknown/Install/Remove/Purge/Hold
+|+- Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+||+ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+||| Name                   Version              Architecture Description
++++-======================-====================-============-===================================
+ii  gnumach-dev:hurd-amd64 2:1.8+git20260224-11 hurd-amd64   GNU version of the Mach microkernel
+ii  mig                    1.8+git20231217-11   hurd-amd64   GNU Mach Interface Generator
+=== headers ===
+default_pager.h
+error.h
+exc.h
+exc_server.h
+gnumach.h
+mach.h
+mach4.h
+mach_host.h
+mach_interface.h
+mach_port.h
+auth.h
+auth_reply.h
+auth_request.h
+crash.h
+exec.h
+exec_startup.h
+fd.h
+fs.h
+fsys.h
+id.h
+=== config status ===
+configure_exit=0
+make_exit=2
+checking for _hurd_exec_paths... yes
+checking for _hurd_libc_proc_init... yes
+hurd_configure_exit=1
+total 1228
+drwxr-xr-x 2 root root   4096 Jul 29 06:51 .
+drwx------ 7 root root   4096 Jul 29 06:50 ..
+-rw-r--r-- 1 root root  18835 Jul 29 06:49 apt-deps.txt
+-rw-r--r-- 1 root root    113 Jul 29 06:49 glibc-build.log
+-rw-r--r-- 1 root root   6326 Jul 29 06:50 glibc-configure.txt
+-rw-r--r-- 1 root root 376563 Jul 29 06:50 glibc-make.txt
+-rw-r--r-- 1 root root      0 Jul 29 06:49 hurd-autoreconf.txt
+-rw-r--r-- 1 root root   4872 Jul 29 06:51 hurd-configure-noparted.txt
+-rw-r--r-- 1 root root   1644 Jul 29 06:50 hurd-configure.txt
+-rw-r--r-- 1 root root   7607 Jul 29 06:49 s3-20260729T054737Z.log
+-rw-r--r-- 1 root root   5343 Jul 29 06:48 s3-20260729T054838Z.log
+-rw-r--r-- 1 root root   5703 Jul 29 06:49 s3-bg.out
+-rw-r--r-- 1 root root   7607 Jul 29 06:49 s3-nohup.out
+-rw-r--r-- 1 root root      5 Jul 29 06:50 s3.pid
+-rw-r--r-- 1 root root 385898 Jul 29 06:50 s3b-nohup.out
+-rw-r--r-- 1 root root 385898 Jul 29 06:50 s3b.log
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/wd0s2      3.0G  2.0G  887M  70% /
+utc=2026-07-29T05:51:05Z
+stage=S4_import_scaffold
+import_dir=/home/eirikr/Github/Arch_Hurd/build/guest-import
+logs:
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/apt-deps.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-build.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-configure.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-make.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-autoreconf.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-configure-noparted.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-configure.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-20260729T054737Z.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-20260729T054838Z.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-bg.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3b.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3b-nohup.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-nohup.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3.pid
+glibc_configure_ok=0
+hurd_configure_ok=0
+glibc_make_ok=0
+--- guest-share MANIFEST ---
+utc=2026-07-29T05:41:26Z
+share=/home/eirikr/Github/Arch_Hurd/build/guest-share
+gnumach=aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8
+mig=cb48044b30fcfe10529ecc1129dd68e93ed73835
+hurd=308b36dbe2b533717a379402d4243d0224327846
+glibc=ab9a3c905ae0ce0b72165106bccb827974bc4092
+glibc_files=16930
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/glibc/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/hurd/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/gnumach/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/mig/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/rumpdisk/GUEST_IMPORT.txt
+--- S4-S8 next gates ---
+S4: install pure hurd servers into product root once glibc+hurd build
+S5: wire rumpdisk; document noide if IDE path hangs
+S6: pacman 7.x on Hurd (PKGBUILD packages/base/pacman)
+S7: assemble disk image (ext2 + translators)
+S8: QEMU smoke + evidence/captures/m0-*
+--- S2 cross-binutils ---
+status=ok
+target=x86_64-gnu
+prefix=/home/eirikr/Github/Arch_Hurd/build/cross
+binutils_ver=2.43.1
+tarball_sha256=13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
+log=/home/eirikr/Github/Arch_Hurd/evidence/captures/cross-binutils-20260729T053624Z.log
+PACKAGE_SET unchanged or already annotated
+import capture: /home/eirikr/Github/Arch_Hurd/evidence/captures/guest-import-20260729T055105Z.txt

@@ -1,0 +1,7 @@
+utc=20260729T055125Z
+package=glibc
+arch=hurd_x86_64
+configure=ok
+make=fail
+blocker=sysdeps/mach MACHINE sysdep macros on x86_64
+logs=evidence/captures/guest-native-*

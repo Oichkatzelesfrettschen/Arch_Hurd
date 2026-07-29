@@ -1,0 +1,8 @@
+utc=20260729T055125Z
+package=hurd
+arch=hurd_x86_64
+configure=ok
+configure_flags=--without-parted
+make=not_started
+note=rumpdisk/Makefile present after configure
+logs=evidence/captures/guest-native-*

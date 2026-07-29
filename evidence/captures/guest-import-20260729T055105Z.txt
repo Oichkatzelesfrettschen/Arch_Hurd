@@ -1,0 +1,47 @@
+utc=2026-07-29T05:51:05Z
+stage=S4_import_scaffold
+import_dir=/home/eirikr/Github/Arch_Hurd/build/guest-import
+logs:
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/apt-deps.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-build.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-configure.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/glibc-make.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-autoreconf.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-configure-noparted.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/hurd-configure.txt
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-20260729T054737Z.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-20260729T054838Z.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-bg.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3b.log
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3b-nohup.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3-nohup.out
+/home/eirikr/Github/Arch_Hurd/build/guest-import/archhurd-logs/s3.pid
+glibc_configure_ok=0
+hurd_configure_ok=0
+glibc_make_ok=0
+--- guest-share MANIFEST ---
+utc=2026-07-29T05:41:26Z
+share=/home/eirikr/Github/Arch_Hurd/build/guest-share
+gnumach=aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8
+mig=cb48044b30fcfe10529ecc1129dd68e93ed73835
+hurd=308b36dbe2b533717a379402d4243d0224327846
+glibc=ab9a3c905ae0ce0b72165106bccb827974bc4092
+glibc_files=16930
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/glibc/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/hurd/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/gnumach/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/mig/GUEST_IMPORT.txt
+wrote /home/eirikr/Github/Arch_Hurd/packages/base/rumpdisk/GUEST_IMPORT.txt
+--- S4-S8 next gates ---
+S4: install pure hurd servers into product root once glibc+hurd build
+S5: wire rumpdisk; document noide if IDE path hangs
+S6: pacman 7.x on Hurd (PKGBUILD packages/base/pacman)
+S7: assemble disk image (ext2 + translators)
+S8: QEMU smoke + evidence/captures/m0-*
+--- S2 cross-binutils ---
+status=ok
+target=x86_64-gnu
+prefix=/home/eirikr/Github/Arch_Hurd/build/cross
+binutils_ver=2.43.1
+tarball_sha256=13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
+log=/home/eirikr/Github/Arch_Hurd/evidence/captures/cross-binutils-20260729T053624Z.log

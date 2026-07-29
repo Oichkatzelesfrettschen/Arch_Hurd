@@ -1,0 +1,16 @@
+utc=2026-07-29T05:51:25Z
+stage=S3
+ssh_ok=1
+ssh_method=pubkey_injected
+guest=GNU debian 0.9 GNU-Mach 1.8+git20260224-up-amd64/Hurd-0.9 x86_64
+glibc_configure_exit=0
+glibc_make_exit=2
+glibc_make_blocker=sysdeps/mach/sysdep.h missing MACHINE SNARF_ARGS/CALL_WITH_SP/stack direction (x86_64 mach asm path)
+hurd_configure_exit=0
+hurd_configure_flags=--without-parted
+hurd_configure_note=rumpdisk Makefile generated
+s2_cross_binutils=ok ver=2.43.1 target=x86_64-gnu
+pure_sources=gnumach mig hurd glibc uploaded to guest
+evidence=evidence/captures/guest-native-*.txt
+import=packages/base/*/GUEST_IMPORT.txt build/guest-import/
+next=fix glibc mach/x86_64 sysdep; full make; install to sysroot; S4 servers

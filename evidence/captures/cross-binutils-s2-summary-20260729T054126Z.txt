@@ -1,0 +1,13 @@
+utc=2026-07-29T05:41:26Z
+stage=S2
+status=ok
+status=ok
+target=x86_64-gnu
+prefix=/home/eirikr/Github/Arch_Hurd/build/cross
+binutils_ver=2.43.1
+tarball_sha256=13f74202a3c4c51118b797a39ea4200d3f6cfbe224da6d1d95bb938480132dfd
+log=/home/eirikr/Github/Arch_Hurd/evidence/captures/cross-binutils-20260729T053624Z.log
+tools:
+GNU assembler (GNU Binutils) 2.43.1
+GNU ld (GNU Binutils) 2.43.1
+16

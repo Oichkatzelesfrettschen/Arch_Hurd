@@ -1,6 +1,6 @@
 # Open steps (scoped backlog)
 
-**As of:** 2026-07-28  
+**As of:** 2026-07-29  
 **Product:** `hurd_x86_64` + pure GNU Savannah ABI + ALPM identity  
 **Not open for R0.1:** rump DRM/KMS, Wayland, SMP default, desktop
 
@@ -13,6 +13,7 @@
 | F2 | stage0 mig + gnumach ELF64 pure build |
 | F3 | Offline gates (pure-gnu, identity, legacy, maps, tests) |
 | F4 | Multi-lane guest tooling links (gnu-hurd-docker) |
+| F5 | S2 host cross-binutils `x86_64-gnu` 2.43.1 (`build/cross/CROSS_BINUTILS.ok`) |
 
 ## M0 critical path (ordered zeros)
 
@@ -27,8 +28,8 @@ R = product of zeros => still 0
 | Step | Stage | Work | Domain | Exit gate |
 |---|---|---|---|---|
 | **S1** | 4 | **DONE** hurd-headers  into stage0/sysroot | host | `build/stage0/include/hurd` present |
-| **S2** | 2 | Cross **binutils** for `x86_64-gnu` (optional parallel) | host | `x86_64-gnu-ld` in build/cross or documented miss |
-| **S3** | 10 prep | Guest playbook: build pure glibc+hurd on Hurd VM | guest | logs under evidence/captures/guest-* |
+| **S2** | 2 | **DONE** Cross **binutils** for `x86_64-gnu` 2.43.1 | host | `build/cross/bin/x86_64-gnu-ld` + CROSS_BINUTILS.ok |
+| **S3** | 10 prep | **IN PROGRESS** Guest playbook: pure glibc+hurd on Hurd VM | guest | logs under evidence/captures/guest-native-* |
 | **S4** | 10 | Install hurd servers into product root | guest/cross | `/hurd/ext2fs` etc. |
 | **S5** | 10 | Wire **rumpdisk** for root | guest | boot with rump, document `noide` |
 | **S6** | 11 | Port/build **pacman 7.x** + deps | guest | `pacman -V` |
@@ -54,4 +55,6 @@ R = product of zeros => still 0
 
 ## Next action now
 
-Implement **S1** (hurd-headers) + bootstrap image/tarball tooling + guest playbook files, then attempt S3 when `ARCH_HURD_QEMU_ACK=yes`.
+**S2 done.** Advance **S3** guest-native glibc+hurd (capture `evidence/captures/guest-native-*.txt`), then import into `hurd_x86_64` packages and walk **S4-S8**.
+
+Host helpers: `scripts/guest-s3-run.sh` (overlay+SMP1+key), `scripts/guest-inject-ssh.sh`, `scripts/import-guest-artifacts.sh`.

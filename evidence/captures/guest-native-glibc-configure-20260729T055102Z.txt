@@ -1,0 +1,130 @@
+checking build system type... x86_64-unknown-gnu0.9
+checking host system type... x86_64-unknown-gnu0.9
+checking for gcc... gcc
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for readelf... readelf
+checking for g++... g++
+checking whether we are using the GNU C++ compiler... yes
+checking whether g++ accepts -g... yes
+checking whether g++ can link programs... yes
+checking for sysdeps preconfigure fragments... aarch64 alpha arm hppa i386 m68k microblaze mips nios2 powerpc riscv s390 sh sparc x86_64 checking whether gcc compiles in -mx32 mode by default... no
+
+checking for use of fpu sysdeps directories... yes
+checking for -fstack-protector... yes
+checking for -fstack-protector-strong... yes
+checking for -fstack-protector-all... yes
+checking for assembler and linker STT_GNU_IFUNC support... yes
+checking for gcc attribute ifunc support... yes
+checking if compiler warns about alias for function with incompatible types... yes
+checking sysdep dirs... sysdeps/mach/hurd sysdeps/gnu sysdeps/unix/bsd sysdeps/unix/inet sysdeps/mach sysdeps/x86_64/64 sysdeps/x86_64/fpu/multiarch sysdeps/x86_64/fpu sysdeps/x86/fpu sysdeps/x86_64/multiarch sysdeps/x86_64 sysdeps/x86 sysdeps/ieee754/float128 sysdeps/ieee754/ldbl-96 sysdeps/ieee754/dbl-64/wordsize-64 sysdeps/ieee754/dbl-64 sysdeps/ieee754/flt-32 sysdeps/unix sysdeps/posix sysdeps/wordsize-64 sysdeps/ieee754 sysdeps/generic
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether /usr/bin/x86_64-gnu-as is GNU as... yes
+checking whether /usr/bin/x86_64-gnu-ld is GNU ld... yes
+checking for /usr/bin/x86_64-gnu-as... /usr/bin/x86_64-gnu-as
+checking version of /usr/bin/x86_64-gnu-as... 2.46, ok
+checking for /usr/bin/x86_64-gnu-ld... /usr/bin/x86_64-gnu-ld
+checking version of /usr/bin/x86_64-gnu-ld... 2.46, ok
+checking for gnumake... no
+checking for gmake... gmake
+checking version of gmake... 4.4.1, ok
+checking for gnumsgfmt... no
+checking for gmsgfmt... no
+checking for msgfmt... msgfmt
+checking version of msgfmt... 0.23.2, ok
+checking for makeinfo... makeinfo
+checking version of makeinfo... 7.3, ok
+checking for sed... sed
+checking version of sed... 4.9, ok
+checking for gawk... gawk
+checking version of gawk... 5.3.2, ok
+checking for bison... bison
+checking version of bison... 3.8.2, ok
+checking if gcc is sufficient to build libc... yes
+checking for nm... nm
+checking for python3... python3
+checking LD_LIBRARY_PATH variable... ok
+checking for bash... /usr/bin/bash
+checking for perl... /usr/bin/perl
+checking for install-info... /usr/bin/install-info
+checking for .set assembler directive... yes
+checking linker support for protected data symbol... yes
+checking linker support for INSERT in linker script... yes
+checking for broken __attribute__((alias()))... no
+checking whether to put _rtld_local into .sdata section... no
+checking whether to use .ctors/.dtors header and trailer... no
+checking for libunwind-support in compiler... no
+checking whether --noexecstack is desirable for .S files... yes
+checking for -z combreloc... yes
+checking for linker that supports -z execstack... yes
+checking for linker that supports --no-dynamic-linker... yes
+checking for -static-pie... yes
+checking for -fpie... yes
+checking for --hash-style option... yes
+checking for sufficient default -shared layout... yes
+checking for GLOB_DAT reloc... yes
+checking linker output format... elf64-x86-64
+checking for -fno-toplevel-reorder -fno-section-anchors... yes
+checking for -mtls-dialect=gnu2... yes
+checking whether cc puts quotes around section names... no
+checking for __builtin_memset... yes
+checking for redirection of built-in functions... yes
+checking for compiler option to disable generation of FMA instructions... -ffp-contract=off
+checking if gcc accepts -fno-tree-loop-distribute-patterns with __attribute__ ((__optimize__))... yes
+checking for libgd... no
+checking for is_selinux_enabled in -lselinux... no
+checking for _FORTIFY_SOURCE predefine... no
+checking whether the linker provides working __ehdr_start... yes
+checking for __builtin_trap with no external dependencies... yes
+checking whether the C++ compiler supports thread_local... yes
+running configure fragment for sysdeps/mach/hurd
+checking Hurd header version... ok
+running configure fragment for sysdeps/gnu
+running configure fragment for sysdeps/mach
+checking for mig... mig
+checking for mach/mach_types.h... yes
+checking for mach/mach_types.defs... yes
+checking for task_t in mach/mach_types.h... task_t
+checking for thread_t in mach/mach_types.h... thread_t
+checking for creation_time in task_basic_info... yes
+checking for mach/mach.defs... yes
+checking for mach/mach4.defs... yes
+checking for mach/gnumach.defs... yes
+checking for mach/clock.defs... no
+checking for mach/clock_priv.defs... no
+checking for mach/host_priv.defs... no
+checking for mach/host_security.defs... no
+checking for mach/ledger.defs... no
+checking for mach/lock_set.defs... no
+checking for mach/processor.defs... no
+checking for mach/processor_set.defs... no
+checking for mach/task.defs... no
+checking for mach/task_notify.defs... yes
+checking for mach/thread_act.defs... no
+checking for mach/vm_map.defs... no
+checking for mach/memory_object.defs... yes
+checking for mach/memory_object_default.defs... yes
+checking for mach/default_pager.defs... yes
+checking for mach/i386/mach_i386.defs... no
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for host_page_size in mach_host.defs... no
+checking for mach/machine/ndr_def.h... no
+checking for machine/ndr_def.h... no
+checking for i386_io_perm_modify in mach_i386.defs... no
+checking for i386_set_gdt in mach_i386.defs... no
+checking whether mig supports the retcode keyword... no
+running configure fragment for sysdeps/x86_64
+checking for AVX512DQ support in assembler... yes
+checking for AVX512 support... yes
+checking for Intel MPX support... no
+running configure fragment for sysdeps/x86
+checking whether -fPIC is default... yes
+checking whether -fPIE is default... yes
+configure: creating ./config.status
+config.status: creating config.make
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing default commands

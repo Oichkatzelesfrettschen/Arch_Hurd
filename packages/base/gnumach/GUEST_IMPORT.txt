@@ -1,0 +1,7 @@
+utc=20260729T055105Z
+package=gnumach
+arch=hurd_x86_64
+import_meta=/home/eirikr/Github/Arch_Hurd/evidence/captures/guest-import-20260729T055105Z.txt
+status=scaffold
+notes=Guest S3 artifacts staged under build/guest-import; not yet installed as ALPM package.
+gnumach=aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8

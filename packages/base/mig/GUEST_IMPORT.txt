@@ -1,0 +1,7 @@
+utc=20260729T055105Z
+package=mig
+arch=hurd_x86_64
+import_meta=/home/eirikr/Github/Arch_Hurd/evidence/captures/guest-import-20260729T055105Z.txt
+status=scaffold
+notes=Guest S3 artifacts staged under build/guest-import; not yet installed as ALPM package.
+mig=cb48044b30fcfe10529ecc1129dd68e93ed73835
