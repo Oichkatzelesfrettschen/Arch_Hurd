@@ -1,0 +1,16 @@
+#
+# ArchHurd target pacman architecture (product, not host)
+#
+[options]
+Architecture = hurd_x86_64
+HoldPkg      = pacman glibc hurd gnumach
+CheckSpace
+# Signatures required once archhurd-keyring exists; optional during early bootstrap only.
+SigLevel     = Required DatabaseOptional
+LocalFileSigLevel = Required
+
+# Never list Arch Linux official mirrors here.
+# [core] / [extra] must be ArchHurd hurd_x86_64 repositories only.
+
+[core]
+Include = /etc/pacman.d/mirrorlist

@@ -26,3 +26,7 @@ __pycache__/
 
 analysis/maps/*.abs
 analysis/maps/scripts.tags
+
+# force-track product config despite global target/ ignore
+!config/target/
+!config/target/**
