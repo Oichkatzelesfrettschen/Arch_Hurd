@@ -1,0 +1,16 @@
+pkgname=filesystem
+pkgver=2026.07
+pkgrel=1
+pkgdesc="Base Arch GNU/Hurd filesystem layout and translator recipes"
+arch=('any')
+license=('GPL')
+groups=('base')
+backup=('etc/fstab' 'etc/group' 'etc/hosts' 'etc/passwd')
+source=('archhurd-dirs.sh' 'translator-policy.txt')
+sha256sums=('SKIP' 'SKIP')
+
+package() {
+  bash "${srcdir}/archhurd-dirs.sh" "${pkgdir}"
+  install -Dm644 "${srcdir}/translator-policy.txt" \
+    "${pkgdir}/usr/share/hurd/translator-policy.txt"
+}

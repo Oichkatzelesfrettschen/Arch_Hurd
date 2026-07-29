@@ -1,0 +1,23 @@
+# rumpdisk is part of pure GNU hurd.git (not a Debian-base package).
+# This split package tracks Arch packaging boundaries only.
+
+pkgname=rumpdisk
+pkgver=0.9.r0.g308b36d
+pkgrel=1
+pkgdesc="Hurd rumpdisk translator (from pure GNU hurd.git)"
+arch=('x86_64')
+url="https://www.gnu.org/software/hurd/hurd/rump.html"
+license=('GPL-2.0-or-later')
+groups=('base-hurd')
+depends=('hurd')
+# Built from the same hurd.git tree as package hurd
+source=("git+https://git.savannah.gnu.org/git/hurd/hurd.git#commit=308b36dbe2b533717a379402d4243d0224327846")
+sha256sums=('SKIP')
+
+package() {
+  install -Dm644 /dev/null "${pkgdir}/usr/share/doc/${pkgname}/SOURCE"
+  cat > "${pkgdir}/usr/share/doc/${pkgname}/SOURCE" <<'EOF'
+Source path in pure hurd.git: rumpdisk/
+Debian rumpkernel package is inspiration only for NetBSD rump library versioning.
+EOF
+}

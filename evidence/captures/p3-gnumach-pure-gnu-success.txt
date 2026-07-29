@@ -1,0 +1,12 @@
+utc: 2026-07-26T00:04:00Z
+base: pure-gnu-savannah
+debian_patches: 0
+gnumach_sha: 55df6d376dff0b9cb4f68da28d35de2a54369531
+mig_sha: cb48044b30fcfe10529ecc1129dd68e93ed73835
+hurd_sha: 308b36dbe2b533717a379402d4243d0224327846
+artifact: build/stage0/boot/gnumach
+sha256: 4f55f4915334f5fca3e38ec7cf721189c649573c54e9192d620896d52149121c
+file: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
+status: known success
+policy: docs/architecture/SOURCE_POLICY.md
+note: prior Debian-tarball build is superseded as default; optional via APPLY_DEBIAN_INSPIRATION_PATCHES=1

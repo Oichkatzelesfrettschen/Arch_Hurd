@@ -1,0 +1,18 @@
+utc: 2026-07-29T00:55:42Z
+glibc_strategy: guest-native (a)
+preferred_images:
+total 24
+drwxr-xr-x 2 eirikr eirikr 4096 Jul 28 17:55 .
+drwxr-xr-x 5 eirikr eirikr 4096 Jul 25 17:15 ..
+lrwxrwxrwx 1 eirikr eirikr   75 Jul 28 17:55 debian-hurd-amd64-20260314.qcow2 -> /home/eirikr/Github/gnu-hurd-docker/images/debian-hurd-amd64-20260314.qcow2
+lrwxrwxrwx 1 eirikr eirikr   73 Jul 28 17:55 debian-hurd-amd64.latest.qcow2 -> /home/eirikr/Github/gnu-hurd-docker/images/debian-hurd-amd64.latest.qcow2
+lrwxrwxrwx 1 eirikr eirikr   66 Jul 28 17:55 debian-hurd-amd64.qcow2 -> /home/eirikr/Github/gnu-hurd-docker/images/debian-hurd-amd64.qcow2
+lrwxrwxrwx 1 eirikr eirikr   61 Jul 28 17:55 hurd-working.qcow2 -> /home/eirikr/Github/gnu-hurd-docker/images/hurd-working.qcow2
+gnu-hurd-docker_runner: /home/eirikr/Github/gnu-hurd-docker/scripts/run-hurd-qemu.sh
+runner_executable: yes
+ssh_probe_2222:
+closed
+ssh_probe_10022:
+closed
+note: live guest login requires ARCH_HURD_QEMU_ACK=yes make guest-shell-run
+status: guest_assets_ready_login_pending

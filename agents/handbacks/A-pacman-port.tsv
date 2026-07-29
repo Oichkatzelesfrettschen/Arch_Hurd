@@ -1,0 +1,11 @@
+agent_id	row_id	kind	key	value	authority	confidence	notes
+A-pacman-port	1	feature	sandbox_namespace	Linux mount/user namespaces used by download/sandbox paths	pacman/libalpm design	hypothesized	disable or stub on Hurd
+A-pacman-port	2	feature	landlock_seccomp	Linux-only syscall filtering	pacman recent versions	hypothesized	compile-time probes
+A-pacman-port	3	api	clone_unshare	may appear in sandbox helpers	libalpm	hypothesized	check meson config
+A-pacman-port	4	feature	fakeroot	needs working fakeroot on Hurd for makepkg	Debian Hurd fakeroot history	known	Debian improved native fakeroot for package builds
+A-pacman-port	5	feature	download_curl	curl backend generally portable	libalpm	hypothesized	verify SSL + pipes on Hurd
+A-pacman-port	6	feature	gpg_signature	gpgme path should port if gnupg ports	libalpm	hypothesized	
+A-pacman-port	7	build_flag	meson_options	need -D flags to disable Linux-only features	meson	speculative	inspect upstream meson_options.txt
+A-pacman-port	8	patch_hint	hist_archhurd_pacman	z3ntu/archhurd_pacman holds old patches for 5.x	github	known	mine; do not apply blindly to 7.x
+A-pacman-port	9	api	path_hardcode	/etc/pacman.conf /var/lib/pacman FHS	pacman	known	align with filesystem package
+A-pacman-port	10	feature	diskspace_check	statvfs portable	libalpm	hypothesized	should work

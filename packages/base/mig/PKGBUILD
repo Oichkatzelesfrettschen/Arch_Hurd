@@ -1,0 +1,34 @@
+# Maintainer: Arch GNU/Hurd rebootstrap
+# BASE: pure GNU Savannah mig.git
+
+pkgname=mig
+pkgver=1.8.r0.gcb48044
+pkgrel=1
+pkgdesc="Mach Interface Generator (pure GNU Hurd project)"
+arch=('x86_64')
+url="https://www.gnu.org/software/hurd/microkernel/mach/mig.html"
+license=('GPL-2.0-or-later')
+makedepends=('git' 'gnumach' 'flex' 'bison' 'autoconf' 'automake')
+source=("git+https://git.savannah.gnu.org/git/hurd/mig.git#commit=cb48044b30fcfe10529ecc1129dd68e93ed73835")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd mig
+  git describe --tags --long 2>/dev/null | sed 's/^v//;s/-/.r/;s/-/./' || \
+    printf "1.8.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd mig
+  [[ -x configure ]] || autoreconf -fi
+  mkdir -p build && cd build
+  # TARGET_* must see gnumach headers
+  export TARGET_CPPFLAGS="${TARGET_CPPFLAGS:--I/usr/include}"
+  ../configure --prefix=/usr --libexecdir=/usr/libexec
+  make
+}
+
+package() {
+  cd mig/build
+  make DESTDIR="${pkgdir}" install
+}

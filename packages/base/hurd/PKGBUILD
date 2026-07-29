@@ -1,0 +1,36 @@
+# Maintainer: Arch GNU/Hurd rebootstrap
+# BASE: pure GNU Savannah hurd.git (includes rumpdisk/rumpnet in-tree)
+
+pkgname=hurd
+pkgver=0.9.r0.g308b36d
+pkgrel=1
+pkgdesc="GNU Hurd servers (pure GNU project; rumpdisk/rumpnet in-tree)"
+arch=('x86_64')
+url="https://www.gnu.org/software/hurd/"
+license=('GPL-2.0-or-later')
+groups=('base-hurd')
+depends=('glibc' 'gnumach')
+makedepends=('git' 'mig' 'gnumach' 'autoconf' 'automake' 'texinfo')
+options=('!emptydirs')
+source=("git+https://git.savannah.gnu.org/git/hurd/hurd.git#commit=308b36dbe2b533717a379402d4243d0224327846")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd hurd
+  git describe --tags --long 2>/dev/null | sed 's/^v//;s/-/.r/;s/-/./' || \
+    printf "0.9.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  echo "hurd: requires glibc for x86_64-pc-gnu + gnumach headers (see SOURCE_POLICY.md)"
+  return 0
+}
+
+package() {
+  install -Dm644 /dev/null "${pkgdir}/usr/share/doc/${pkgname}/SOURCE"
+  cat > "${pkgdir}/usr/share/doc/${pkgname}/SOURCE" <<'EOF'
+pure GNU Savannah hurd.git
+In-tree: rumpdisk rumpnet (not Debian-base packages)
+Build after stage0 headers + glibc for x86_64-pc-gnu.
+EOF
+}

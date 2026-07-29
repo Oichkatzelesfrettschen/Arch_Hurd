@@ -1,0 +1,3 @@
+These maps are lexical structure only.
+They do not prove runtime reachability, authorization, safety, or hardware behavior.
+Regenerate with: make maps

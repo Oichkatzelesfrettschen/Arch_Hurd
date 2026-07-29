@@ -1,0 +1,41 @@
+# Maintainer: Arch GNU/Hurd rebootstrap
+# BASE: pure GNU -- hurd/glibc.git on Savannah (not Debian libc0.3 packages)
+
+pkgname=glibc
+pkgver=2.41.r0.gTBD
+pkgrel=1
+pkgdesc="GNU C Library for GNU/Hurd (pure Savannah; guest-native build strategy)"
+arch=('x86_64')
+url="https://www.gnu.org/software/libc/"
+license=('GPL-2.0-or-later' 'LGPL-2.1-or-later')
+groups=('base')
+makedepends=('git' 'gnumach' 'mig' 'python' 'gawk' 'bison')
+options=('!strip' 'staticlibs')
+# Commit filled when make fetch FETCH_GLIBC=1 pins HEAD into ORACLE_PINS
+source=("git+https://git.savannah.gnu.org/git/hurd/glibc.git#commit=80be325ebee0e381190c0d408d2592990f13c8c7")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd glibc
+  git describe --tags --long 2>/dev/null | sed 's/^glibc-//;s/-/.r/;s/-/./' || \
+    printf "2.41.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+prepare() {
+  echo "glibc: build on Hurd guest (strategy a) or cross x86_64-pc-gnu; see docs/architecture/GLIBC_STRATEGY.md"
+}
+
+build() {
+  # Not built on Linux host without full cross sysroot.
+  # Guest-native: configure --host=x86_64-gnu --enable-kernel=... against gnumach headers.
+  return 0
+}
+
+package() {
+  install -Dm644 /dev/null "${pkgdir}/usr/share/doc/${pkgname}/SOURCE"
+  cat > "${pkgdir}/usr/share/doc/${pkgname}/SOURCE" <<'EOF'
+pure GNU: https://git.savannah.gnu.org/git/hurd/glibc.git
+Strategy: guest-native (GLIBC_STRATEGY.md option a)
+Debian libc0.3 is reference only, never product base.
+EOF
+}

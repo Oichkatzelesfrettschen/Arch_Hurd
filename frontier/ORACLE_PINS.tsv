@@ -1,0 +1,9 @@
+component	oracle	version_or_ref	arch	status	source_url	notes
+gnumach	gnu-savannah	git:master@aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8	x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/gnumach.git	pure GNU; re-pin on rebuild
+mig	gnu-savannah	git:master@cb48044b30fcfe10529ecc1129dd68e93ed73835	host	pinned-git	https://git.savannah.gnu.org/git/hurd/mig.git	pure GNU
+hurd	gnu-savannah	git:master@308b36dbe2b533717a379402d4243d0224327846	x86_64	pinned-git	https://git.savannah.gnu.org/git/hurd/hurd.git	includes rumpdisk rumpnet
+glibc	gnu-hurd	git:master@80be325ebee0e381190c0d408d2592990f13c8c7	x86_64-pc-gnu	pinned-git	https://git.savannah.gnu.org/git/hurd/glibc.git	or glibc + hurd ports
+rumpdisk	gnu-hurd-tree	in-tree hurd/rumpdisk	x86_64	known	hurd.git	not a separate Debian base
+qemu-machine	practice	q35	x86_64	known	Guix/Debian docs as inspiration only	
+debian-gnumach	debian-inspiration	2:1.8+git20260224-11	amd64	inspiration-only	deb.debian.org	DO NOT use as base
+debian-rump	debian-inspiration	0~20250111-8	hurd-amd64	inspiration-only	debian-ports	compare only

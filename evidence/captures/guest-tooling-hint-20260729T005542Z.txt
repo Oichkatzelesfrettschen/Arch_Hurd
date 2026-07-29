@@ -1,0 +1,13 @@
+=== Arch_Hurd guest shell (tooling lane) ===
+docker_project: /home/eirikr/Github/gnu-hurd-docker
+preferred_image: /home/eirikr/Github/Arch_Hurd/external-assets/images/debian-hurd-amd64.latest.qcow2
+launcher: /home/eirikr/Github/gnu-hurd-docker/scripts/run-hurd-qemu.sh (preferred)
+
+To launch with gnu-hurd-docker:
+  ARCH_HURD_QEMU_ACK=yes scripts/guest-shell.sh run
+  # or directly:
+  /home/eirikr/Github/gnu-hurd-docker/scripts/run-hurd-qemu.sh -i /home/eirikr/Github/Arch_Hurd/external-assets/images/debian-hurd-amd64.latest.qcow2 -m 2048 -c 1 -p 2222
+
+After login, capture toolchain:
+  uname -a; gcc -v 2>&1 | tail -3; dpkg -l gnumach hurd 2>/dev/null | cat
+  # save host-side into evidence/captures/guest-tooling-*.txt

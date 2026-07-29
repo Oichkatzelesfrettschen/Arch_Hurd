@@ -1,0 +1,9 @@
+agent_id	row_id	kind	key	value	authority	confidence	notes
+A-oracle-pins	1	version	gnumach	2:1.8+git20260224-11	debian madison sid	known	source+binaries on main archive
+A-oracle-pins	2	version	hurd	1:0.9.git20260527-3	debian madison sid	known	source package
+A-oracle-pins	3	version	mig	1.8+git20231217-11	debian madison sid	known	mig-x86-64-gnu on amd64
+A-oracle-pins	4	version	glibc	2.42-17	debian madison sid	known	linux arches listed; hurd libc binary name TBD on ports
+A-oracle-pins	5	tool	mig_host	/usr/bin/mig	local preflight	known	present on research host
+A-oracle-pins	6	version	gnumach_guix_class	1.8+git20250731	guix blog 2026-03	known	class string from blog not exact guix hash
+A-oracle-pins	7	version	hurd_guix_class	0.9.git20251029	guix blog 2026-03	known	class string from blog
+A-oracle-pins	8	gap	rumpkernel	not_on_main_madison	debian madison	known	must query debian-ports or hurd binary packages

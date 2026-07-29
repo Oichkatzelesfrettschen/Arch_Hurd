@@ -1,0 +1,5 @@
+component	filename	url	sha256	status	notes
+gnumach-git	gnumach.git	https://git.savannah.gnu.org/git/hurd/gnumach.git		fetch-git	pure GNU base
+mig-git	mig.git	https://git.savannah.gnu.org/git/hurd/mig.git		fetch-git	pure GNU base
+hurd-git	hurd.git	https://git.savannah.gnu.org/git/hurd/hurd.git		fetch-git	pure GNU base
+glibc-git	glibc.git	https://git.savannah.gnu.org/git/hurd/glibc.git		fetch-git	optional until P7

@@ -1,0 +1,16 @@
+# Translator policy sketch for Arch GNU/Hurd base (M0)
+# Format: path<TAB>server-or-note
+# This is policy documentation for mkhurdroot; not executed as a script.
+
+/	ext2fs root (or firmlink story) -- set at boot by gnumach modules
+/dev	devnode / null / random policy via hurd
+/servers/socket/1	pflocal
+/servers/socket/2	pfinet (after NIC node exists)
+/proc	procfs if packaged
+/servers/password	password server
+# Disk nodes via rumpdisk example (Guix/Debian patterns):
+# /dev/rumpdisk -> rumpdisk translator
+# /dev/wd0 -> devnode -M /dev/rumpdisk wd0
+# Network example (RumpNET wm/e1000 class):
+# /dev/rumpnet -> rumpnet
+# /dev/wm0 -> devnode -M /dev/rumpnet wm0

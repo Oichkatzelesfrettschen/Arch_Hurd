@@ -1,0 +1,36 @@
+# Maintainer: Arch GNU/Hurd rebootstrap
+# Track Arch Linux pacman version; apply Hurd portability patches.
+
+pkgname=pacman
+pkgver=7.0.0
+pkgrel=1
+pkgdesc="A library-based package manager with dependency support (Hurd port)"
+arch=('x86_64')
+url="https://archlinux.org/pacman/"
+license=('GPL-2.0-or-later')
+groups=('base')
+depends=('bash' 'glibc' 'libarchive' 'curl' 'gpgme' 'pacman-mirrorlist' 'archhurd-keyring')
+makedepends=('meson' 'asciidoc' 'doxygen')
+backup=('etc/pacman.conf' 'etc/makepkg.conf')
+source=()
+sha256sums=()
+
+prepare() {
+  echo "pacman scaffold: fetch upstream and re-evaluate Linux sandbox/namespace code" >&2
+}
+
+build() {
+  return 0
+}
+
+package() {
+  install -Dm644 /dev/null "${pkgdir}/usr/share/doc/${pkgname}/SCAFFOLD"
+  cat > "${pkgdir}/usr/share/doc/${pkgname}/SCAFFOLD" <<'EOF'
+Port checklist (A-pacman-port):
+- disable or stub Linux mount namespaces / landlock / seccomp if present
+- verify download + signature paths
+- fakeroot / privilege model on Hurd
+- path hardcodes for /etc/pacman.d
+See docs/research/novel-insights.md I6 and agents/contracts/A-pacman-port.md
+EOF
+}

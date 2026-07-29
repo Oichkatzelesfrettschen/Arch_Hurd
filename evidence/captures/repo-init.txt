@@ -1,0 +1,8 @@
+repo_init_utc: 2026-07-25T22:37:00Z
+workspace: /home/eirikr/Github/Arch_Hurd
+prior_contents: empty directory only
+action: greenfield rebootstrap scaffold + 2026 research corpus
+gates: make check PASS; make maps PASS; make preflight PASS (cross gcc missing expected)
+host_mig: /usr/bin/mig present
+oracle_pins_partial: gnumach 2:1.8+git20260224-11; hurd 1:0.9.git20260527-3; mig 1.8+git20231217-11
+m0_evidence: absent

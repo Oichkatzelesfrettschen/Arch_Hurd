@@ -1,0 +1,19 @@
+agent_id	row_id	kind	key	value	authority	confidence	notes
+A-map-scripts	1	script_map	scripts/build-gnumach.sh	01180791917e684c823377ca9e7661191d061f7629e6ab89deb14995fce7ebe7	gen-maps.sh	known	funcs=0 bytes=2277
+A-map-scripts	2	script_map	scripts/build-mig.sh	029a8e9c693e9773f04a563e986bb9eb2599c384e925a9fe9674a5a635d49712	gen-maps.sh	known	funcs=0 bytes=2554
+A-map-scripts	3	script_map	scripts/build-stage0-headers.sh	da7728af81997427744d3cbd1d97fa95a07b49c1733e1c7bb29257bfa4925dad	gen-maps.sh	known	funcs=0 bytes=2807
+A-map-scripts	4	script_map	scripts/check.sh	b81ad3e77937c09716ed3e0984465a01eaadaf184bcf90f4710420e30911ea9d	gen-maps.sh	known	funcs=0 bytes=2143
+A-map-scripts	5	script_map	scripts/fetch-debian-inspiration.sh	2f2447c003c57e30f526ba1fac2a75818d06aaf001f19a5a2b3afe3f7093bead	gen-maps.sh	known	funcs=0 bytes=1557
+A-map-scripts	6	script_map	scripts/fetch-sources.sh	6e18bd6d713927bc6b940f6372808a95b8636ff4f1b2ed1225d702fab0356b04	gen-maps.sh	known	funcs=1 bytes=2911
+A-map-scripts	7	script_map	scripts/gen-maps.sh	b39b396a3cecc0ba0d92ce9834b2215d014360a9c3b35bbd330fdb20c1dfea1d	gen-maps.sh	known	funcs=0 bytes=4068
+A-map-scripts	8	script_map	scripts/guest-shell.sh	337f13b9778ad29d35e9d5ade1f9cf4c9b0941caed99b6681d8f243935da81f5	gen-maps.sh	known	funcs=2 bytes=2875
+A-map-scripts	9	script_map	scripts/host-preflight.sh	da07cd1dee3048a07c147226c0d18719c6dace0578224bbd71685a3f5976fb3b	gen-maps.sh	known	funcs=1 bytes=1627
+A-map-scripts	10	script_map	scripts/host-tooling-scan.sh	ad0abaf12d70c0454fbdf93cf2668f17152d2c74bfc60a9dd080417de3b3c01f	gen-maps.sh	known	funcs=1 bytes=2618
+A-map-scripts	11	script_map	scripts/link-local-dev-assets.sh	2921ee8b0de1b1320ab628426a07a02a3019b59ffeb615027f41f596eb3f2cec	gen-maps.sh	known	funcs=1 bytes=1831
+A-map-scripts	12	script_map	scripts/mkhurdroot.sh	e42c05cf9e8ed2bfe8296d01c84b1b36a9be9674f7f86e243e3b55bb988aeba9	gen-maps.sh	known	funcs=1 bytes=3017
+A-map-scripts	13	script_map	scripts/plan.sh	f5e5dfba27c83dd4df76e89e5b00beb3d517d8fb772572a9c168c311d3e0e7a1	gen-maps.sh	known	funcs=0 bytes=1103
+A-map-scripts	14	script_map	scripts/qemu-guest-hint.sh	773b7ed4f3b73b6612b8d9d4477adf341936944e3f32c2b49eac35d498fcd874	gen-maps.sh	known	funcs=0 bytes=1578
+A-map-scripts	15	script_map	scripts/qemu-smoke.sh	192db7e26b50e16a4b699154c66d57a09c0fe4025dab5b366405650a7f5d06fb	gen-maps.sh	known	funcs=1 bytes=1063
+A-map-scripts	16	script_map	scripts/seed-local-repo.sh	7f8186e7b5646b67f2c64821808fd3fbcd5f9e89fff19b21443f405dce78d75e	gen-maps.sh	known	funcs=0 bytes=1129
+A-map-scripts	17	script_map	scripts/status.sh	a6e860b425992e38bcb0b55cfc41aae013ca1ea492f3184114a81368d836b756	gen-maps.sh	known	funcs=0 bytes=3789
+A-map-scripts	18	script_map	scripts/verify-pure-gnu-default.sh	1ec4f2c8879e86e6526c4be21497c6fd6ad03fb2598dc24c38aea7895841564b	gen-maps.sh	known	funcs=0 bytes=3427

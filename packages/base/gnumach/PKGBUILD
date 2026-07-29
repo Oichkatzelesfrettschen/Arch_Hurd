@@ -1,0 +1,41 @@
+# Maintainer: Arch GNU/Hurd rebootstrap
+# BASE: pure GNU Savannah gnumach.git (NOT Debian)
+
+pkgname=gnumach
+# pkgver is derived from git describe when packaging; placeholder for tooling
+pkgver=1.8.r0.g55df6d3
+pkgrel=1
+pkgdesc="GNU Mach microkernel (pure GNU Hurd project sources)"
+arch=('x86_64')
+url="https://www.gnu.org/software/hurd/microkernel/mach/gnumach.html"
+license=('GPL-2.0-or-later')
+groups=('base-hurd')
+makedepends=('git' 'mig' 'autoconf' 'automake' 'texinfo' 'gawk' 'flex' 'bison')
+options=('!strip' '!buildflags')
+source=("git+https://git.savannah.gnu.org/git/hurd/gnumach.git#commit=aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8")
+sha256sums=('SKIP')
+
+pkgver() {
+  cd gnumach
+  git describe --tags --long 2>/dev/null | sed 's/^v//;s/-/.r/;s/-/./' || \
+    printf "1.8.r%s.g%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build() {
+  cd gnumach
+  [[ -x configure ]] || autoreconf -fi
+  mkdir -p build && cd build
+  # PC/AT platform; x86_64 CPU from host
+  ../configure --prefix=/usr --enable-platform=at
+  make
+}
+
+package() {
+  cd gnumach/build
+  make DESTDIR="${pkgdir}" install || true
+  if [[ -f gnumach ]]; then
+    install -Dm644 gnumach "${pkgdir}/boot/gnumach"
+  fi
+  install -Dm644 /dev/null "${pkgdir}/usr/share/doc/${pkgname}/SOURCE"
+  echo "pure GNU Savannah gnumach.git" > "${pkgdir}/usr/share/doc/${pkgname}/SOURCE"
+}

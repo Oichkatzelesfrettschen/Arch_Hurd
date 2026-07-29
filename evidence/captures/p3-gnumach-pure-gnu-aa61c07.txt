@@ -1,0 +1,11 @@
+utc: 2026-07-29T01:01:33Z
+base: pure-gnu-savannah
+gnumach_sha: aa61c07a4a098fd45b3e63935b4ac5e0bc5281b8
+glibc_sha: 80be325ebee0e381190c0d408d2592990f13c8c7
+mig_sha: cb48044b30fcfe10529ecc1129dd68e93ed73835
+hurd_sha: 308b36dbe2b533717a379402d4243d0224327846
+artifact: build/stage0/boot/gnumach
+sha256: 789897b596a4dedc5b039d4e8dfa0ac2dd210925c943cc806ddb2a6a2ff2602f
+file: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
+debian_patches: 0
+m0: ABSENT

@@ -1,0 +1,8 @@
+utc: 2026-07-26T00:00:19Z
+artifact: build/stage0/boot/gnumach
+sha256: 70561df850e01f15edea24223e695ebd09d248f086e48d42405d63e6a4ffc7b4
+file: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, with debug_info, not stripped
+mig: build/stage0/bin/mig (mig (GNU MIG) 1.8+git20231217)
+platform: at (x86_64 host)
+oracle: gnumach 1.8+git20260224-11 debian patches applied
+status: known success

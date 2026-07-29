@@ -1,0 +1,21 @@
+# OPTIONAL inspiration reference only.
+# Product rump path is pure hurd.git rumpdisk/rumpnet.
+# This package documents NetBSD rump library versioning used by some distros.
+
+pkgname=rumpkernel-inspiration
+pkgver=0
+pkgrel=0
+pkgdesc="DOCUMENTATION ONLY: Debian-style rump library pin is inspiration, not base"
+arch=('any')
+url="https://www.gnu.org/software/hurd/hurd/rump.html"
+license=('BSD-2-Clause')
+
+package() {
+  install -Dm644 /dev/null "${pkgdir}/usr/share/doc/${pkgname}/README"
+  cat > "${pkgdir}/usr/share/doc/${pkgname}/README" <<'EOF'
+Do not install this as the Arch base.
+Use packages/base/rumpdisk from pure hurd.git.
+Debian ports rumpkernel 0~20250111-8 is inspiration for NetBSD rump
+library versioning only (see SOURCE_POLICY.md).
+EOF
+}
