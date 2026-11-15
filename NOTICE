@@ -1,0 +1,8 @@
+Licensing of this repository
+
+Everything in this repository is offered under the MIT License in LICENSE. The
+repository holds build recipes, scripts, documentation and evidence; it vendors
+no upstream source. The GNU, Hurd, GNU Mach, pacman and other upstream sources
+that the recipes fetch from GNU Savannah and elsewhere, and the packages built
+from them, keep their own licenses (for GNU components, the GNU General Public
+License and related licenses named in each upstream tree).
